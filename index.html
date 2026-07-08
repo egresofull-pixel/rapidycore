@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      id="meta-description"
+      name="description"
+      content="RapidyCore is a Windows utility for Blade Ball with external screen-based color trigger setup, mouse hotkeys, LMB spam, AFK Space mode, diagnostics and setup guides."
+    >
+    <meta id="og-title" property="og:title" content="RapidyCore - Blade Ball External Color Trigger Utility">
+    <meta
+      id="og-description"
+      property="og:description"
+      content="RapidyCore is a Windows utility for Blade Ball with external screen-based color trigger setup, mouse hotkeys, LMB spam, AFK Space mode, diagnostics and setup guides."
+    >
+    <meta property="og:type" content="website">
+    <meta id="twitter-title" name="twitter:title" content="RapidyCore - Blade Ball External Color Trigger Utility">
+    <meta
+      id="twitter-description"
+      name="twitter:description"
+      content="RapidyCore is a Windows utility for Blade Ball with external screen-based color trigger setup, mouse hotkeys, LMB spam, AFK Space mode, diagnostics and setup guides."
+    >
+    <meta name="twitter:card" content="summary">
+    <title>RapidyCore - Blade Ball External Color Trigger Utility</title>
+    <link rel="icon" href="assets/rapidycore.ico">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main" data-i18n="a11y.skip">Skip to content</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="#top" aria-label="RapidyCore">
+          <img src="assets/rapidycore.ico" alt="" class="brand-logo" width="36" height="36">
+          <span>RapidyCore</span>
+        </a>
+
+        <nav class="nav-links" aria-label="Primary navigation">
+          <a href="#features" data-i18n="nav.features">Features</a>
+          <a href="#preview" data-i18n="nav.preview">Preview</a>
+          <a href="#how" data-i18n="nav.how">How it works</a>
+          <a href="#setup" data-i18n="nav.setup">Setup</a>
+          <a href="#download" data-i18n="nav.download">Download</a>
+          <a href="#faq" data-i18n="nav.faq">FAQ</a>
+        </nav>
+
+        <div class="language-switcher" aria-label="Language selector">
+          <button class="lang-button is-active" type="button" data-lang="en" aria-pressed="true">EN</button>
+          <button class="lang-button" type="button" data-lang="ru" aria-pressed="false">RU</button>
+          <button class="lang-button" type="button" data-lang="uk" aria-pressed="false">UK</button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top">
+        <div class="hero-backdrop" aria-hidden="true">
+          <img src="assets/logo.png" alt="" class="hero-logo">
+        </div>
+        <div class="container hero-content">
+          <p class="section-kicker" data-i18n="hero.kicker">Official RapidyCore website</p>
+          <h1 data-i18n="hero.title">RapidyCore for Blade Ball</h1>
+          <p class="hero-tagline" data-i18n="hero.tagline">
+            RapidyCore is a lightweight Windows utility for configurable hotkeys, external screen-based triggers, fast mouse input, and AFK automation.
+          </p>
+          <div class="hero-actions" aria-label="Primary actions">
+            <a class="btn btn-primary" href="#download" data-i18n="hero.download">Download</a>
+            <a class="btn btn-secondary" href="#features" data-i18n="hero.features">View features</a>
+            <a class="btn btn-ghost" href="#changelog" data-i18n="hero.changelog">Changelog</a>
+          </div>
+          <ul class="hero-points" id="hero-points" aria-label="RapidyCore highlights"></ul>
+        </div>
+      </section>
+
+      <section class="section" id="features">
+        <div class="container">
+          <div class="section-heading">
+            <p class="section-kicker" data-i18n="features.kicker">Core toolkit</p>
+            <h2 data-i18n="features.title">Configurable input control, kept local.</h2>
+            <p data-i18n="features.copy">
+              RapidyCore focuses on user-controlled Windows automation with clear settings, visual feedback, and no account requirement.
+            </p>
+          </div>
+          <div class="feature-grid" id="feature-grid"></div>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="preview">
+        <div class="container">
+          <div class="section-heading">
+            <p class="section-kicker" data-i18n="preview.kicker">Interface preview</p>
+            <h2 id="preview-title">Real interface snapshots.</h2>
+            <p id="preview-copy">Current screenshots from the desktop app: main control window, trigger settings, and diagnostics panel.</p>
+          </div>
+          <div class="preview-grid" id="preview-grid"></div>
+        </div>
+      </section>
+
+      <section class="section" id="how">
+        <div class="container">
+          <div class="section-heading compact">
+            <p class="section-kicker" data-i18n="how.kicker">How it works</p>
+            <h2 data-i18n="how.title">Simple setup, visible behavior.</h2>
+          </div>
+          <ol class="steps" id="steps-list"></ol>
+        </div>
+      </section>
+
+      <section class="section section-alt setup-guide" id="setup">
+        <div class="container">
+          <div class="section-heading">
+            <p class="section-kicker" data-i18n="setup.kicker">Setup Guide</p>
+            <h2 data-i18n="setup.title">Match the visible signal with RapidyCore.</h2>
+            <p data-i18n="setup.copy">
+              Configure the in-game highlight color and match it with RapidyCore's external color trigger.
+            </p>
+          </div>
+
+          <div class="guide-summary">
+            <p data-i18n="setup.summary">
+              The game shows a visible color signal, RapidyCore detects that color externally from the screen, and then uses the configured normal Windows input action.
+            </p>
+          </div>
+
+          <div class="guide-warning">
+            <p data-i18n="setup.warning">
+              Trigger Bot reacts to the configured color in the scanned screen area. Any object or effect with the same or similar color, such as swords, visual effects, UI highlights, or particles, may also be detected.
+            </p>
+          </div>
+
+          <div class="guide-steps" id="guide-steps"></div>
+
+          <div class="guide-note">
+            <p data-i18n="setup.note">
+              RapidyCore uses external screen-based color detection. It does not inject into Roblox, read memory, or execute code inside the game.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section safety-band" id="safety">
+        <div class="container safety-layout">
+          <div>
+            <p class="section-kicker" data-i18n="safety.kicker">Safety and transparency</p>
+            <h2 data-i18n="safety.title">Local by design, clear about what it does.</h2>
+            <p class="lead" data-i18n="safety.copy">
+              RapidyCore is designed around external screen-based detection and normal Windows input. It does not require an account, cloud backend, or hidden background services.
+            </p>
+          </div>
+          <ul class="safety-list" id="safety-list"></ul>
+        </div>
+      </section>
+
+      <section class="section download-section" id="download">
+        <div class="container download-layout">
+          <div class="download-copy">
+            <p class="section-kicker" id="download-kicker">Download</p>
+            <h2 id="download-title">RapidyCore 1.1 Beta is available.</h2>
+            <p id="download-copy">Use the official Windows installer below. Privacy and Terms stay available before you install.</p>
+            <div class="download-meta" aria-label="Release details">
+              <div class="download-stat">
+                <span id="download-version-label">Version</span>
+                <strong id="download-version-value">1.1 Beta</strong>
+              </div>
+              <div class="download-stat">
+                <span id="download-type-label">File type</span>
+                <strong id="download-type-value">Windows installer</strong>
+              </div>
+            </div>
+            <p class="download-note" id="download-note">
+              Beta build. A practical LMB Spam starting point is 4-6 ms. Windows may ask for confirmation, and the installer still includes the optional Microsoft Defender exclusion step.
+            </p>
+            <div class="download-legal">
+              <a href="privacy.html" data-i18n="footer.privacy">Privacy</a>
+              <a href="terms.html" data-i18n="footer.terms">Terms</a>
+            </div>
+            <div class="download-community">
+              <a href="https://t.me/rapidycore" target="_blank" rel="noreferrer">Telegram</a>
+              <a href="https://t.me/+GZCNSRBBcKJjMDRi" target="_blank" rel="noreferrer">Chat</a>
+              <a href="https://t.me/boost/rapidycore" target="_blank" rel="noreferrer">Boost</a>
+            </div>
+          </div>
+          <div class="download-action">
+            <a class="btn btn-primary download-button" id="download-button" href="downloads/RapidyCoreInstall-1.1-Beta.exe" download>
+              Download installer
+            </a>
+            <p class="download-free-note" id="download-free-note">RapidyCore is free. Donations are optional.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="changelog">
+        <div class="container">
+          <div class="section-heading">
+            <p class="section-kicker" data-i18n="changelog.kicker">Changelog</p>
+            <h2 data-i18n="changelog.title">Recent product work.</h2>
+            <p id="changelog-copy">Current website and app version: 1.1 Beta.</p>
+          </div>
+          <div class="changelog-list" id="changelog-list"></div>
+        </div>
+      </section>
+
+      <section class="section section-alt support-section" id="support">
+        <div class="container">
+          <div class="support-card">
+            <div class="support-copy">
+              <p class="section-kicker" id="support-kicker">Support development</p>
+              <h2 id="support-title">Support RapidyCore</h2>
+              <p id="support-copy">
+                RapidyCore is free. If the project helps you, you can support development with a voluntary donation. Donations help with testing, bug fixes, documentation, website updates, and future improvements.
+              </p>
+              <p class="support-note" id="support-note">Donations are optional and do not unlock extra features.</p>
+            </div>
+            <a class="btn btn-secondary support-button" id="support-button" href="https://ko-fi.com/rapidy" target="_blank" rel="noopener noreferrer">
+              Donate on Ko-fi
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="faq">
+        <div class="container">
+          <div class="section-heading">
+            <p class="section-kicker" data-i18n="faq.kicker">FAQ</p>
+            <h2 data-i18n="faq.title">Common questions.</h2>
+          </div>
+          <div class="faq-list" id="faq-list"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-brand">
+          <img src="assets/rapidycore.ico" alt="" class="footer-logo" width="32" height="32">
+          <div>
+            <strong>RapidyCore</strong>
+            <p data-i18n="footer.copy">Personal Windows automation with local settings and transparent controls.</p>
+          </div>
+        </div>
+        <div class="footer-links">
+          <a href="#features" data-i18n="nav.features">Features</a>
+          <a href="#setup" data-i18n="nav.setup">Setup</a>
+          <a href="#download" data-i18n="nav.download">Download</a>
+          <a href="#changelog" data-i18n="nav.changelog">Changelog</a>
+          <a href="#support" id="footer-donate-link" data-i18n="footer.donate">Donate</a>
+          <a href="privacy.html" data-i18n="footer.privacy">Privacy</a>
+          <a href="terms.html" data-i18n="footer.terms">Terms</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="app.js" defer></script>
+  </body>
+</html>
