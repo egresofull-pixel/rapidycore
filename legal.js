@@ -1,5 +1,16 @@
 const STORAGE_KEY = "rapidycore-language";
 const supportedLanguages = ["en", "ru", "uk"];
+const languageFadeMs = 120;
+const legalRevealSelector = [
+  ".legal-hero .container",
+  ".legal-section",
+  ".footer-inner"
+].join(", ");
+const reducedMotionQuery = window.matchMedia
+  ? window.matchMedia("(prefers-reduced-motion: reduce)")
+  : { matches: false };
+let languageTransitionTimer = 0;
+let revealObserver;
 
 const legalTranslations = {
   en: {
@@ -383,7 +394,68 @@ function updateLanguageButtons(lang) {
   });
 }
 
-function renderLegalPage(lang) {
+function prefersReducedMotion() {
+  return reducedMotionQuery.matches;
+}
+
+function refreshRevealItems(showImmediately = false) {
+  const items = document.querySelectorAll(legalRevealSelector);
+
+  items.forEach((item, index) => {
+    item.classList.add("reveal-item");
+    item.style.setProperty("--reveal-delay", `${Math.min((index % 8) * 45, 220)}ms`);
+
+    if (showImmediately || prefersReducedMotion() || !revealObserver) {
+      item.classList.add("is-visible");
+      return;
+    }
+
+    item.classList.remove("is-visible");
+    revealObserver.observe(item);
+  });
+}
+
+function setupRevealAnimations() {
+  if (!("IntersectionObserver" in window) || prefersReducedMotion()) {
+    refreshRevealItems(true);
+    return;
+  }
+
+  document.body.classList.add("reveal-ready");
+
+  revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) {
+          return;
+        }
+
+        entry.target.classList.add("is-visible");
+        revealObserver.unobserve(entry.target);
+      });
+    },
+    {
+      threshold: 0.12,
+      rootMargin: "0px 0px -8% 0px"
+    }
+  );
+
+  refreshRevealItems(false);
+}
+
+function handleReducedMotionChange() {
+  document.body.classList.remove("is-language-switching");
+
+  if (revealObserver) {
+    revealObserver.disconnect();
+    revealObserver = undefined;
+  }
+
+  document.body.classList.toggle("reveal-ready", !prefersReducedMotion());
+  setupRevealAnimations();
+}
+
+function renderLegalPage(lang, options = {}) {
   const page = document.body.dataset.legalPage === "terms" ? "terms" : "privacy";
   const pageData = legalTranslations[lang][page];
   document.documentElement.lang = lang;
@@ -411,11 +483,20 @@ function renderLegalPage(lang) {
   });
 
   updateLanguageButtons(lang);
+
+  if (options.refreshReveal !== false) {
+    refreshRevealItems(false);
+  }
 }
 
 document.addEventListener("DOMContentLoaded", () => {
   const initialLanguage = safeStoredLanguage();
-  renderLegalPage(initialLanguage);
+  renderLegalPage(initialLanguage, { refreshReveal: false });
+  setupRevealAnimations();
+
+  if (reducedMotionQuery.addEventListener) {
+    reducedMotionQuery.addEventListener("change", handleReducedMotionChange);
+  }
 
   document.querySelectorAll("[data-lang]").forEach((button) => {
     button.addEventListener("click", () => {
@@ -423,8 +504,16 @@ document.addEventListener("DOMContentLoaded", () => {
       if (!supportedLanguages.includes(nextLanguage)) {
         return;
       }
+
+      window.clearTimeout(languageTransitionTimer);
       safeSaveLanguage(nextLanguage);
-      renderLegalPage(nextLanguage);
+      document.body.classList.add("is-language-switching");
+      languageTransitionTimer = window.setTimeout(() => {
+        renderLegalPage(nextLanguage);
+        window.requestAnimationFrame(() => {
+          document.body.classList.remove("is-language-switching");
+        });
+      }, languageFadeMs);
     });
   });
 });

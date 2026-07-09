@@ -942,6 +942,70 @@ h3 {
   line-height: 1.5;
 }
 
+.versions-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.versions-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(120deg, rgba(125, 231, 245, 0.052), transparent 34%),
+    linear-gradient(300deg, rgba(140, 240, 178, 0.04), transparent 44%);
+  pointer-events: none;
+}
+
+.versions-section > .container {
+  position: relative;
+}
+
+.version-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.version-card {
+  min-height: 220px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: rgba(10, 16, 28, 0.58);
+  box-shadow: var(--shadow);
+  padding: 20px;
+  backdrop-filter: blur(18px);
+  transition:
+    transform 250ms var(--ease-soft),
+    border-color 250ms var(--ease-soft),
+    background 250ms var(--ease-soft),
+    box-shadow 250ms var(--ease-soft);
+}
+
+.version-card.is-current {
+  border-color: rgba(125, 231, 245, 0.34);
+  background:
+    linear-gradient(135deg, rgba(125, 231, 245, 0.08), transparent 52%),
+    rgba(14, 23, 38, 0.72);
+}
+
+.version-card:hover,
+.version-card:focus-within {
+  transform: translateY(-2px);
+  border-color: rgba(125, 231, 245, 0.28);
+  background: rgba(18, 26, 42, 0.72);
+  box-shadow: 0 18px 54px rgba(0, 0, 0, 0.32), 0 0 28px rgba(125, 231, 245, 0.08);
+}
+
+.version-card p {
+  color: var(--muted-strong);
+}
+
+.version-download {
+  width: fit-content;
+  margin-top: 18px;
+}
+
 .support-section {
   border-top: 1px solid var(--line);
 }
@@ -1101,8 +1165,25 @@ h3 {
   min-height: 68vh;
 }
 
+.legal-page .section-alt {
+  background:
+    linear-gradient(120deg, rgba(125, 231, 245, 0.045), transparent 38%),
+    rgba(255, 255, 255, 0.025);
+}
+
 .legal-hero {
   padding: 94px 0 62px;
+}
+
+.legal-hero .container {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background:
+    linear-gradient(135deg, rgba(125, 231, 245, 0.055), transparent 42%),
+    rgba(10, 16, 28, 0.56);
+  box-shadow: var(--shadow);
+  padding: 26px;
+  backdrop-filter: blur(18px);
 }
 
 .legal-hero h1 {
@@ -1135,6 +1216,7 @@ h3 {
   background: rgba(18, 25, 40, 0.68);
   box-shadow: var(--shadow);
   padding: 20px;
+  backdrop-filter: blur(18px);
 }
 
 .legal-section h2 {
@@ -1368,6 +1450,7 @@ h3 {
   .feature-grid,
   .preview-grid,
   .download-meta,
+  .version-grid,
   .guide-media-compare,
   .steps,
   .safety-list,
@@ -1380,6 +1463,7 @@ h3 {
   .guide-warning,
   .guide-note,
   .guide-step,
+  .legal-hero .container,
   .legal-section {
     padding: 16px;
   }

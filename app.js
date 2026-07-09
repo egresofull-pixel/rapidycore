@@ -1,5 +1,9 @@
 const STORAGE_KEY = "rapidycore-language";
 const supportedLanguages = ["en", "ru", "uk"];
+const releaseDownloads = {
+  latest: "downloads/RapidyCoreInstall-1.2-Beta.exe",
+  previous: "downloads/RapidyCoreInstall-1.1-Beta.exe"
+};
 
 const translations = {
   en: {
@@ -1481,7 +1485,7 @@ Object.assign(previewContent.en, {
   items: [
     {
       title: "Settings workspace",
-      text: "Coordinate click settings, target process filtering, session protection, and the profile import/export controls.",
+      text: "Settings, target process filtering, session protection, and the profile import/export controls.",
       alt: "RapidyCore settings workspace screenshot",
       image: "assets/preview-main-panel.png"
     },
@@ -1505,7 +1509,7 @@ Object.assign(previewContent.ru, {
   items: [
     {
       title: "Раздел настроек",
-      text: "Настройки координатного клика, фильтр целевого процесса, защита сессии и управление импортом и экспортом профилей.",
+      text: "Settings, target process filtering, session protection, and the profile import/export controls.",
       alt: "Скриншот раздела настроек RapidyCore",
       image: "assets/preview-main-panel.png"
     },
@@ -1529,7 +1533,7 @@ Object.assign(previewContent.uk, {
   items: [
     {
       title: "Розділ налаштувань",
-      text: "Налаштування координатного кліку, фільтр цільового процесу, захист сесії та керування імпортом і експортом профілів.",
+      text: "Settings, target process filtering, session protection, and the profile import/export controls.",
       alt: "Скриншот розділу налаштувань RapidyCore",
       image: "assets/preview-main-panel.png"
     },
@@ -1605,6 +1609,228 @@ translations.uk.faq.items.splice(translations.uk.faq.items.length - 1, 0, {
   answer: "Практичний стартовий діапазон — 4-6 мс. Нижчі значення не завжди стабільно зараховуються та можуть підвищувати навантаження."
 });
 
+const versionHistoryContent = {
+  en: {
+    title: "Version history.",
+    copy: "Current website and app version: v1.2 Beta.",
+    versions: [
+      {
+        label: "Latest",
+        title: "Version v1.2 Beta",
+        action: "download",
+        cta: "Install v1.2 Beta",
+        items: [
+          "Current recommended version.",
+          "Improved Trigger Bot color matching.",
+          "Reduced false positives from unrelated colors such as yellow and orange.",
+          "Added Mini Status lock / click-through mode.",
+          "Added Reset position for Mini Status.",
+          "Added AFK activity indicator to Mini Status.",
+          "Removed Coordinate Mode because it was unreliable in real gameplay.",
+          "General stability cleanup."
+        ]
+      },
+      {
+        label: "Previous",
+        title: "Version v1.1 Beta",
+        action: "versions",
+        cta: "View old versions",
+        items: [
+          "Previous beta version.",
+          "Includes core RapidyCore features: Trigger Bot, Trigger Bot #2, LMB Spam, AFK Space mode, mouse hotkeys, target process filter, diagnostics, and mini status window.",
+          "Kept available for users who need the older build."
+        ]
+      }
+    ]
+  },
+  ru: {
+    title: "История версий.",
+    copy: "Текущая версия сайта и приложения: v1.2 Beta.",
+    versions: [
+      {
+        label: "Актуальная",
+        title: "Версия v1.2 Beta",
+        action: "download",
+        cta: "Установить v1.2 Beta",
+        items: [
+          "Рекомендуемая версия для большинства пользователей.",
+          "Улучшено распознавание цвета в Trigger Bot.",
+          "Уменьшены ложные срабатывания от посторонних цветов, например желтого и оранжевого.",
+          "Добавлена блокировка Mini Status / режим click-through.",
+          "Добавлен сброс позиции Mini Status.",
+          "Добавлен индикатор активности AFK в Mini Status.",
+          "Coordinate Mode удален, потому что был ненадежен в реальной игре.",
+          "Общая чистка стабильности."
+        ]
+      },
+      {
+        label: "Предыдущая",
+        title: "Версия v1.1 Beta",
+        action: "versions",
+        cta: "Посмотреть старые версии",
+        items: [
+          "Предыдущая beta-версия.",
+          "Содержит основные функции RapidyCore: Trigger Bot, Trigger Bot #2, LMB Spam, AFK Space mode, хоткеи мыши, фильтр целевого процесса, диагностику и окно Mini Status.",
+          "Оставлена доступной для пользователей, которым нужна старая сборка."
+        ]
+      }
+    ]
+  },
+  uk: {
+    title: "Історія версій.",
+    copy: "Поточна версія сайту та застосунку: v1.2 Beta.",
+    versions: [
+      {
+        label: "Актуальна",
+        title: "Версія v1.2 Beta",
+        action: "download",
+        cta: "Встановити v1.2 Beta",
+        items: [
+          "Рекомендована версія для більшості користувачів.",
+          "Покращено розпізнавання кольору в Trigger Bot.",
+          "Зменшено хибні спрацювання від сторонніх кольорів, наприклад жовтого та помаранчевого.",
+          "Додано блокування Mini Status / режим click-through.",
+          "Додано скидання позиції Mini Status.",
+          "Додано індикатор активності AFK у Mini Status.",
+          "Coordinate Mode видалено, тому що він був ненадійним у реальній грі.",
+          "Загальне очищення стабільності."
+        ]
+      },
+      {
+        label: "Попередня",
+        title: "Версія v1.1 Beta",
+        action: "versions",
+        cta: "Переглянути старі версії",
+        items: [
+          "Попередня beta-версія.",
+          "Містить основні функції RapidyCore: Trigger Bot, Trigger Bot #2, LMB Spam, AFK Space mode, хоткеї миші, фільтр цільового процесу, діагностику та вікно Mini Status.",
+          "Залишена доступною для користувачів, яким потрібна стара збірка."
+        ]
+      }
+    ]
+  }
+};
+
+const versionsContent = {
+  en: {
+    kicker: "Old versions",
+    title: "Available builds.",
+    copy: "v1.2 Beta is recommended for most users. v1.1 Beta remains available as an older build.",
+    entries: [
+      {
+        badge: "Current version",
+        title: "Beta 1.2",
+        text: "Current recommended version.",
+        href: releaseDownloads.latest,
+        button: "Install v1.2 Beta"
+      },
+      {
+        badge: "Previous beta",
+        title: "Beta 1.1",
+        text: "Kept available for users who need the older build.",
+        href: releaseDownloads.previous,
+        button: "Download v1.1 Beta"
+      }
+    ]
+  },
+  ru: {
+    kicker: "Старые версии",
+    title: "Доступные сборки.",
+    copy: "v1.2 Beta рекомендуется для большинства пользователей. v1.1 Beta остается доступной как старая сборка.",
+    entries: [
+      {
+        badge: "Актуальная",
+        title: "Beta 1.2",
+        text: "Рекомендуемая версия для большинства пользователей.",
+        href: releaseDownloads.latest,
+        button: "Установить v1.2 Beta"
+      },
+      {
+        badge: "Предыдущая",
+        title: "Beta 1.1",
+        text: "Оставлена доступной для пользователей, которым нужна старая сборка.",
+        href: releaseDownloads.previous,
+        button: "Скачать v1.1 Beta"
+      }
+    ]
+  },
+  uk: {
+    kicker: "Старі версії",
+    title: "Доступні збірки.",
+    copy: "v1.2 Beta рекомендована для більшості користувачів. v1.1 Beta залишається доступною як стара збірка.",
+    entries: [
+      {
+        badge: "Актуальна",
+        title: "Beta 1.2",
+        text: "Рекомендована версія для більшості користувачів.",
+        href: releaseDownloads.latest,
+        button: "Встановити v1.2 Beta"
+      },
+      {
+        badge: "Попередня",
+        title: "Beta 1.1",
+        text: "Залишена доступною для користувачів, яким потрібна стара збірка.",
+        href: releaseDownloads.previous,
+        button: "Завантажити v1.1 Beta"
+      }
+    ]
+  }
+};
+
+Object.assign(translations.en, {
+  metaTitle: "RapidyCore - Blade Ball Free Windows Utility",
+  metaDescription: "RapidyCore is a free Windows utility for Blade Ball using external screen-based color detection and normal Windows input."
+});
+
+Object.assign(translations.en.hero, {
+  tagline: "RapidyCore is a free Windows utility for Blade Ball using external screen-based color detection and normal Windows input."
+});
+
+Object.assign(downloadContent.en, {
+  title: "RapidyCore v1.2 Beta is available.",
+  button: "Install v1.2 Beta",
+  versionValue: "v1.2 Beta",
+  note: "Beta build. A practical LMB Spam starting point is 4-6 ms. Windows may ask for confirmation, and the installer still includes the optional Microsoft Defender exclusion step.",
+  safetyItem: "Official website download includes the current v1.2 Beta installer.",
+  faqAnswer: "Yes. The official Windows installer for RapidyCore v1.2 Beta is available in the download section.",
+  oldVersionsButton: "View old versions"
+});
+
+Object.assign(downloadContent.ru, {
+  title: "RapidyCore v1.2 Beta is available.",
+  button: "Установить v1.2 Beta",
+  versionValue: "v1.2 Beta",
+  safetyItem: "Official website download includes the current v1.2 Beta installer.",
+  faqAnswer: "The official Windows installer for RapidyCore v1.2 Beta is available in the download section.",
+  oldVersionsButton: "Посмотреть старые версии"
+});
+
+Object.assign(downloadContent.uk, {
+  title: "RapidyCore v1.2 Beta is available.",
+  button: "Встановити v1.2 Beta",
+  versionValue: "v1.2 Beta",
+  safetyItem: "Official website download includes the current v1.2 Beta installer.",
+  faqAnswer: "The official Windows installer for RapidyCore v1.2 Beta is available in the download section.",
+  oldVersionsButton: "Переглянути старі версії"
+});
+
+Object.assign(changelogContent.en, {
+  copy: versionHistoryContent.en.copy,
+  versions: versionHistoryContent.en.versions
+});
+
+["en", "ru", "uk"].forEach((lang) => {
+  translations[lang].changelog.title = versionHistoryContent[lang].title;
+  Object.assign(changelogContent[lang], {
+    copy: versionHistoryContent[lang].copy,
+    versions: versionHistoryContent[lang].versions
+  });
+});
+
+previewContent.en.items[0].text = "Settings, target process filtering, session protection, and the profile import/export controls.";
+previewContent.ru.items[0].text = "Settings, target process filtering, session protection, and the profile import/export controls.";
+previewContent.uk.items[0].text = "Settings, target process filtering, session protection, and the profile import/export controls.";
+
 const telegramLinksByLang = {
   en: [
     { href: "https://t.me/rapidycore", label: "channel" },
@@ -1654,6 +1880,7 @@ const revealSelector = [
   ".safety-layout > *",
   ".safety-list li",
   ".download-layout > *",
+  ".version-card",
   ".changelog-item",
   ".changelog-note",
   ".faq-item",
@@ -2190,16 +2417,22 @@ function renderSafety(lang) {
 
 function renderDownload(lang) {
   const download = getLocalizedContent(downloadContent, lang);
+  const downloadButton = document.querySelector("#download-button");
   setNodeText("#download-kicker", download.kicker);
   setNodeText("#download-title", download.title);
   setNodeText("#download-copy", download.copy);
   setNodeText("#download-button", download.button);
+  setNodeText("#old-versions-button", download.oldVersionsButton);
   setNodeText("#download-version-label", download.versionLabel);
   setNodeText("#download-version-value", download.versionValue);
   setNodeText("#download-type-label", download.typeLabel);
   setNodeText("#download-type-value", download.typeValue);
   setNodeText("#download-free-note", download.freeNote);
   setNodeText("#download-note", download.note);
+
+  if (downloadButton) {
+    downloadButton.href = releaseDownloads.latest;
+  }
 }
 
 function renderSupport(lang) {
@@ -2209,6 +2442,44 @@ function renderSupport(lang) {
   setNodeText("#support-copy", support.copy);
   setNodeText("#support-note", support.note);
   setNodeText("#support-button", support.button);
+}
+
+function renderVersions(lang) {
+  const grid = document.querySelector("#version-grid");
+
+  if (!grid) {
+    return;
+  }
+
+  const versions = getLocalizedContent(versionsContent, lang);
+  setNodeText("#versions-kicker", versions.kicker);
+  setNodeText("#versions-title", versions.title);
+  setNodeText("#versions-copy", versions.copy);
+  grid.innerHTML = "";
+
+  versions.entries.forEach((entry, index) => {
+    const card = document.createElement("article");
+    card.className = index === 0 ? "version-card is-current" : "version-card";
+
+    const badge = document.createElement("span");
+    badge.className = "changelog-tag";
+    badge.textContent = entry.badge;
+
+    const title = document.createElement("h3");
+    title.textContent = entry.title;
+
+    const text = document.createElement("p");
+    text.textContent = entry.text;
+
+    const link = document.createElement("a");
+    link.className = index === 0 ? "btn btn-primary version-download" : "btn btn-secondary version-download";
+    link.href = entry.href;
+    link.download = "";
+    link.textContent = entry.button;
+
+    card.append(badge, title, text, link);
+    grid.appendChild(card);
+  });
 }
 
 function ensureToastStack() {
@@ -2255,6 +2526,16 @@ function handleVersionAction(action, lang) {
 
     if (target) {
       scrollToSection(target, "#download");
+    }
+
+    return;
+  }
+
+  if (action === "versions") {
+    const target = document.querySelector("#versions");
+
+    if (target) {
+      scrollToSection(target, "#versions");
     }
 
     return;
@@ -2363,6 +2644,7 @@ function renderPage(lang) {
   renderGuide(lang);
   renderSafety(lang);
   renderDownload(lang);
+  renderVersions(lang);
   renderSupport(lang);
   renderChangelog(lang);
   renderFaq(lang);
