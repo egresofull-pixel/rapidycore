@@ -88,10 +88,11 @@ The public installer lives in `downloads/`.
 
 Current public installer filename:
 
+- `downloads/RapidyCoreInstall-1.2.1-Beta.exe`
+
+Older beta installers retained for users who need a previous build:
+
 - `downloads/RapidyCoreInstall-1.2-Beta.exe`
-
-Older beta installer retained for users who need the previous build:
-
 - `downloads/RapidyCoreInstall-1.1-Beta.exe`
 
 Large installer files should be updated intentionally and only when a new approved release is ready.

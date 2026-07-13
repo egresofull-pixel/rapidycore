@@ -45,7 +45,7 @@ const legalTranslations = {
           title: "User-controlled installer choices",
           items: [
             "The optional Microsoft Defender exclusion is controlled by the user during setup.",
-            "RapidyCore uses external screen-based detection and normal Windows input. It does not inject into games, read process memory, or claim to avoid anti-cheat systems."
+            "RapidyCore uses external screen-based detection and normal Windows input."
           ]
         },
         {
@@ -82,7 +82,7 @@ const legalTranslations = {
           title: "Technical scope",
           items: [
             "RapidyCore uses external screen-based detection and normal Windows input.",
-            "RapidyCore does not inject into other software, read memory, or claim to avoid anti-cheat systems."
+            "RapidyCore works from the screen image and normal Windows input controls."
           ]
         },
         {
@@ -264,14 +264,14 @@ const legalTranslations = {
 Object.assign(legalTranslations.en.privacy, {
   lead: "RapidyCore is a local Windows utility. The current website describes an external screen-based Blade Ball setup and explains what the app and website do with data."
 });
-legalTranslations.en.privacy.sections[2].items[1] = "RapidyCore is intended for external screen-based workflows such as the Blade Ball setup described on the website. It does not inject into Roblox, read memory, or execute code inside the game.";
+legalTranslations.en.privacy.sections[2].items[1] = "RapidyCore is intended for external screen-based workflows such as the Blade Ball setup described on the website.";
 
 Object.assign(legalTranslations.en.terms, {
   lead: "Use RapidyCore responsibly and only where automation is allowed. The current website describes an external screen-based Blade Ball workflow."
 });
 legalTranslations.en.terms.sections[2].items = [
   "RapidyCore is intended for external screen-based workflows such as the Blade Ball setup described on the website.",
-  "RapidyCore does not inject into Roblox, read memory, or execute code inside the game."
+  "RapidyCore works from the screen image and normal Windows input controls."
 ];
 
 Object.assign(legalTranslations.ru.privacy, {

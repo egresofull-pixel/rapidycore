@@ -1,8 +1,9 @@
 const STORAGE_KEY = "rapidycore-language";
 const supportedLanguages = ["en", "ru", "uk"];
 const releaseDownloads = {
-  latest: "downloads/RapidyCoreInstall-1.2-Beta.exe",
-  previous: "downloads/RapidyCoreInstall-1.1-Beta.exe"
+  latest: "downloads/RapidyCoreInstall-1.2.1-Beta.exe",
+  previous: "downloads/RapidyCoreInstall-1.2-Beta.exe",
+  older: "downloads/RapidyCoreInstall-1.1-Beta.exe"
 };
 
 const translations = {
@@ -129,14 +130,14 @@ const translations = {
     },
     download: {
       kicker: "Release status",
-      title: "RapidyCore 1.1 Beta is available.",
+      title: "RapidyCore v1.2.1 Beta is available.",
       copy: "Use the official Windows installer below. Privacy and Terms stay available before you install.",
       button: "Download installer"
     },
     changelog: {
       kicker: "Versions",
       title: "Version history.",
-      copy: "Current website and app version: 1.1 Beta.",
+      copy: "Current website and app version: v1.2.1 Beta.",
       betaNotePrefix: "RapidyCore is currently in beta. Bugs are possible. Please report issues through Telegram: ",
       betaNoteSuffix: " or in RapidyCore™ Chat|Bug reports.",
       versions: [
@@ -640,7 +641,7 @@ translations.en.setup = {
   copy: "Configure the in-game highlight color and match it with RapidyCore's external color trigger.",
   summary: "The game shows a visible color signal, RapidyCore detects that color externally from the screen, and then uses the configured normal Windows input action.",
   warning: "Trigger Bot reacts to the configured color in the scanned screen area. Any object or effect with the same or similar color, such as swords, visual effects, UI highlights, or particles, may also be detected.",
-  note: "RapidyCore uses external screen-based color detection. It does not inject into Roblox, read memory, or execute code inside the game.",
+  note: "RapidyCore uses external screen-based color detection and normal Windows input.",
   imageLabel: "Guide image",
   steps: [
     {
@@ -879,44 +880,44 @@ const previewContent = {
 const downloadContent = {
   en: {
     kicker: "Download",
-    title: "RapidyCore 1.1 Beta is available.",
+    title: "RapidyCore v1.2.1 Beta is available.",
     copy: "Use the official Windows installer below. Privacy and Terms stay available before you install.",
     button: "Download installer",
     versionLabel: "Version",
-    versionValue: "1.1 Beta",
+    versionValue: "v1.2.1 Beta",
     typeLabel: "File type",
     typeValue: "Windows installer",
     note: "Beta build. Windows may ask for confirmation, and the installer still includes the optional Microsoft Defender exclusion step.",
     safetyItem: "Official website download includes the current beta installer.",
-    faqAnswer: "Yes. The official Windows installer for version 1.1 Beta is available in the download section.",
+    faqAnswer: "Yes. The official Windows installer for RapidyCore v1.2.1 Beta is available in the download section.",
     unavailableToast: "Version 1.0 Beta is not available for download or install."
   },
   ru: {
     kicker: "Скачать",
-    title: "RapidyCore 1.1 Beta уже доступен.",
+    title: "RapidyCore v1.2.1 Beta доступна.",
     copy: "Ниже размещен официальный установщик для Windows. Privacy и Terms по-прежнему доступны перед установкой.",
     button: "Скачать установщик",
     versionLabel: "Версия",
-    versionValue: "1.1 Beta",
+    versionValue: "v1.2.1 Beta",
     typeLabel: "Тип файла",
     typeValue: "Установщик Windows",
     note: "Бета-сборка. Windows может запросить подтверждение, а в установщике по-прежнему есть опциональный шаг с исключением Microsoft Defender.",
     safetyItem: "На официальном сайте доступен текущий бета-установщик.",
-    faqAnswer: "Да. Официальный установщик Windows для версии 1.1 Beta доступен в разделе скачивания.",
+    faqAnswer: "Да. Официальный установщик Windows для RapidyCore v1.2.1 Beta доступен в разделе скачивания.",
     unavailableToast: "Version 1.0 Beta пока недоступен для скачивания и установки."
   },
   uk: {
     kicker: "Завантаження",
-    title: "RapidyCore 1.1 Beta вже доступний.",
+    title: "RapidyCore v1.2.1 Beta доступна.",
     copy: "Нижче розміщено офіційний інсталятор для Windows. Privacy і Terms, як і раніше, доступні перед встановленням.",
     button: "Завантажити інсталятор",
     versionLabel: "Версія",
-    versionValue: "1.1 Beta",
+    versionValue: "v1.2.1 Beta",
     typeLabel: "Тип файла",
     typeValue: "Інсталятор Windows",
     note: "Бета-збірка. Windows може попросити підтвердження, а в інсталяторі як і раніше є опціональний крок із винятком Microsoft Defender.",
     safetyItem: "На офіційному сайті доступний поточний бета-інсталятор.",
-    faqAnswer: "Так. Офіційний інсталятор Windows для версії 1.1 Beta доступний у розділі завантаження.",
+    faqAnswer: "Так. Офіційний інсталятор Windows для RapidyCore v1.2.1 Beta доступний у розділі завантаження.",
     unavailableToast: "Version 1.0 Beta поки недоступний для завантаження та встановлення."
   }
 };
@@ -947,7 +948,7 @@ const supportContent = {
 
 const changelogContent = {
   en: {
-    copy: "Current website and app version: 1.1 Beta.",
+    copy: "Current website and app version: v1.2.1 Beta.",
     betaNotePrefix: "RapidyCore is currently in beta. Bugs are possible. Please report issues through Telegram: ",
     betaNoteSuffix: " or in the RapidyCore Telegram chat.",
     versions: [
@@ -1113,7 +1114,7 @@ Object.assign(translations.en.faq, {
     },
     {
       question: "Is RapidyCore for all Roblox games?",
-      answer: "The current setup guide and external color trigger workflow are made for Blade Ball. RapidyCore uses screen-based detection and normal Windows input, so it does not read Roblox memory or inject code into the game."
+      answer: "The current setup guide and external color trigger workflow are made for Blade Ball. RapidyCore uses external screen-based detection and normal Windows input."
     },
     {
       question: "Does RapidyCore need an account?",
@@ -1145,7 +1146,7 @@ Object.assign(translations.en.faq, {
     },
     {
       question: "Is the download public yet?",
-      answer: "The official Windows installer for RapidyCore 1.1 Beta is available in the download section."
+      answer: "The official Windows installer for RapidyCore v1.2.1 Beta is available in the download section."
     }
   ]
 });
@@ -1156,7 +1157,7 @@ translations.en.setup = {
   copy: "Configure Blade Ball's highlight color and match it with RapidyCore's external color trigger.",
   summary: "This guide is for Blade Ball. It explains how to match Blade Ball's visible highlight color with RapidyCore's external trigger color. RapidyCore reacts to a visible screen color, not internal game data.",
   warning: "Trigger Bot reacts to the configured color in the scanned screen area. Swords, effects, UI highlights, particles, or other objects with the same or similar color may also be detected.",
-  note: "RapidyCore uses external screen-based color detection. It does not inject into Roblox, read memory, or execute code inside the game.",
+  note: "RapidyCore uses external screen-based color detection and normal Windows input.",
   imageLabel: "Blade Ball guide image",
   steps: [
     {
@@ -1203,10 +1204,10 @@ translations.en.setup = {
 };
 
 Object.assign(downloadContent.en, {
-  title: "RapidyCore 1.1 Beta is available.",
+  title: "RapidyCore v1.2.1 Beta is available.",
   note: "Beta build. Windows may ask for confirmation, and the installer still includes the optional Microsoft Defender exclusion step.",
   safetyItem: "Official website download includes the current beta installer.",
-  faqAnswer: "The official Windows installer for RapidyCore 1.1 Beta is available in the download section."
+  faqAnswer: "The official Windows installer for RapidyCore v1.2.1 Beta is available in the download section."
 });
 
 downloadContent.en.freeNote = "RapidyCore is free. Donations are optional.";
@@ -1224,7 +1225,7 @@ translations.ru.footer.donate = "Донат";
 translations.uk.footer.donate = "Донат";
 
 Object.assign(changelogContent.en, {
-  copy: "Current website and app version: 1.1 Beta."
+  copy: "Current website and app version: v1.2.1 Beta."
 });
 changelogContent.en.versions[0].title = "Version 1.1 Beta";
 
@@ -1337,22 +1338,22 @@ Object.assign(translations.ru.faq, {
     },
     {
       question: "Скачивание уже публичное?",
-      answer: "Официальный установщик Windows для RapidyCore 1.1 Beta for Blade Ball доступен в разделе скачивания."
+      answer: "Официальный установщик Windows для RapidyCore v1.2.1 Beta доступен в разделе скачивания."
     }
   ]
 });
 
 Object.assign(downloadContent.ru, {
-  title: "RapidyCore 1.1 Beta для Blade Ball",
+  title: "RapidyCore v1.2.1 Beta для Blade Ball",
   note: "Бета-сборка для текущего сценария Blade Ball. Windows может запросить подтверждение, а в установщике по-прежнему есть опциональный шаг с исключением Microsoft Defender.",
   safetyItem: "На официальном сайте доступен текущий бета-установщик для Blade Ball.",
-  faqAnswer: "Официальный установщик Windows для RapidyCore 1.1 Beta for Blade Ball доступен в разделе скачивания."
+  faqAnswer: "Официальный установщик Windows для RapidyCore v1.2.1 Beta доступен в разделе скачивания."
 });
 
 Object.assign(changelogContent.ru, {
-  copy: "Текущая версия сайта и приложения: RapidyCore 1.1 Beta for Blade Ball."
+  copy: "Текущая версия сайта и приложения: RapidyCore v1.2.1 Beta."
 });
-changelogContent.ru.versions[0].title = "Version 1.1 Beta for Blade Ball";
+changelogContent.ru.versions[0].title = "Версия v1.2.1 Beta";
 
 Object.assign(translations.uk, {
   metaTitle: "RapidyCore для Blade Ball",
@@ -1463,22 +1464,22 @@ Object.assign(translations.uk.faq, {
     },
     {
       question: "Завантаження вже публічне?",
-      answer: "Офіційний інсталятор Windows для RapidyCore 1.1 Beta for Blade Ball доступний у розділі завантаження."
+      answer: "Офіційний інсталятор Windows для RapidyCore v1.2.1 Beta доступний у розділі завантаження."
     }
   ]
 });
 
 Object.assign(downloadContent.uk, {
-  title: "RapidyCore 1.1 Beta для Blade Ball",
+  title: "RapidyCore v1.2.1 Beta для Blade Ball",
   note: "Бета-збірка для поточного сценарію Blade Ball. Windows може попросити підтвердження, а в інсталяторі, як і раніше, є опціональний крок із винятком Microsoft Defender.",
   safetyItem: "На офіційному сайті доступний поточний бета-інсталятор для Blade Ball.",
-  faqAnswer: "Офіційний інсталятор Windows для RapidyCore 1.1 Beta for Blade Ball доступний у розділі завантаження."
+  faqAnswer: "Офіційний інсталятор Windows для RapidyCore v1.2.1 Beta доступний у розділі завантаження."
 });
 
 Object.assign(changelogContent.uk, {
-  copy: "Поточна версія сайту й застосунку: RapidyCore 1.1 Beta for Blade Ball."
+  copy: "Поточна версія сайту й застосунку: RapidyCore v1.2.1 Beta."
 });
-changelogContent.uk.versions[0].title = "Version 1.1 Beta for Blade Ball";
+changelogContent.uk.versions[0].title = "Версія v1.2.1 Beta";
 
 Object.assign(previewContent.en, {
   copy: "Current screenshots from the desktop app: settings, trigger configuration, and live diagnostics.",
@@ -1553,28 +1554,28 @@ Object.assign(previewContent.uk, {
 });
 
 Object.assign(downloadContent.en, {
-  title: "RapidyCore 1.1 Beta is available.",
+  title: "RapidyCore v1.2.1 Beta is available.",
   note: "Beta build. A practical LMB Spam starting point is 4-6 ms. Windows may ask for confirmation, and the installer still includes the optional Microsoft Defender exclusion step.",
   safetyItem: "Official website download includes the current beta installer.",
-  faqAnswer: "Yes. The official Windows installer for RapidyCore 1.1 Beta is available in the download section."
+  faqAnswer: "Yes. The official Windows installer for RapidyCore v1.2.1 Beta is available in the download section."
 });
 
 Object.assign(downloadContent.ru, {
-  title: "RapidyCore 1.1 Beta уже доступен.",
+  title: "RapidyCore v1.2.1 Beta доступна.",
   note: "Бета-сборка. Для Spam ЛКМ практичная стартовая настройка — 4-6 мс. Windows может запросить подтверждение, а в установщике по-прежнему есть опциональный шаг с исключением Microsoft Defender.",
   safetyItem: "На официальном сайте доступен текущий бета-установщик.",
-  faqAnswer: "Да. Официальный установщик Windows для RapidyCore 1.1 Beta доступен в разделе скачивания."
+  faqAnswer: "Да. Официальный установщик Windows для RapidyCore v1.2.1 Beta доступен в разделе скачивания."
 });
 
 Object.assign(downloadContent.uk, {
-  title: "RapidyCore 1.1 Beta вже доступний.",
+  title: "RapidyCore v1.2.1 Beta доступна.",
   note: "Бета-збірка. Для Spam ЛКМ практичний стартовий діапазон — 4-6 мс. Windows може попросити підтвердження, а в інсталяторі, як і раніше, є опціональний крок із винятком Microsoft Defender.",
   safetyItem: "На офіційному сайті доступний поточний бета-інсталятор.",
-  faqAnswer: "Так. Офіційний інсталятор Windows для RapidyCore 1.1 Beta доступний у розділі завантаження."
+  faqAnswer: "Так. Офіційний інсталятор Windows для RapidyCore v1.2.1 Beta доступний у розділі завантаження."
 });
 
 Object.assign(changelogContent.en, {
-  copy: "Current website and app version: 1.1 Beta.",
+  copy: "Current website and app version: v1.2.1 Beta.",
   betaNotePrefix: "RapidyCore is currently in beta. Bugs are possible. Follow us on Telegram: ",
   betaNoteSuffix: "."
 });
@@ -1612,15 +1613,28 @@ translations.uk.faq.items.splice(translations.uk.faq.items.length - 1, 0, {
 const versionHistoryContent = {
   en: {
     title: "Version history.",
-    copy: "Current website and app version: v1.2 Beta.",
+    copy: "Current website and app version: v1.2.1 Beta.",
     versions: [
       {
         label: "Latest",
-        title: "Version v1.2 Beta",
+        title: "Version v1.2.1 Beta",
         action: "download",
-        cta: "Install v1.2 Beta",
+        cta: "Install v1.2.1 Beta",
         items: [
-          "Current recommended version.",
+          "Compatibility update.",
+          "Fixed VC++ Runtime dependency issue.",
+          "Rebuilt RapidyCore and installer with static MSVC runtime.",
+          "RapidyCore should no longer require users to manually install Microsoft Visual C++ Redistributable just to open the app or installer.",
+          "General compatibility cleanup."
+        ]
+      },
+      {
+        label: "Previous beta",
+        title: "Version v1.2 Beta",
+        action: "versions",
+        cta: "View old versions",
+        items: [
+          "Main v1.2 feature/stability update.",
           "Improved Trigger Bot color matching.",
           "Reduced false positives from unrelated colors such as yellow and orange.",
           "Added Mini Status lock / click-through mode.",
@@ -1631,7 +1645,7 @@ const versionHistoryContent = {
         ]
       },
       {
-        label: "Previous",
+        label: "Older beta",
         title: "Version v1.1 Beta",
         action: "versions",
         cta: "View old versions",
@@ -1645,15 +1659,28 @@ const versionHistoryContent = {
   },
   ru: {
     title: "История версий.",
-    copy: "Текущая версия сайта и приложения: v1.2 Beta.",
+    copy: "Текущая версия сайта и приложения: v1.2.1 Beta.",
     versions: [
       {
         label: "Актуальная",
-        title: "Версия v1.2 Beta",
+        title: "Версия v1.2.1 Beta",
         action: "download",
-        cta: "Установить v1.2 Beta",
+        cta: "Установить v1.2.1 Beta",
         items: [
-          "Рекомендуемая версия для большинства пользователей.",
+          "Обновление совместимости.",
+          "Исправлена проблема зависимости от VC++ Runtime.",
+          "RapidyCore и установщик пересобраны со статическим MSVC runtime.",
+          "RapidyCore больше не должен требовать ручной установки Microsoft Visual C++ Redistributable только для запуска приложения или установщика.",
+          "Общая чистка совместимости."
+        ]
+      },
+      {
+        label: "Предыдущая beta-версия",
+        title: "Версия v1.2 Beta",
+        action: "versions",
+        cta: "Посмотреть старые версии",
+        items: [
+          "Основное обновление функций и стабильности v1.2.",
           "Улучшено распознавание цвета в Trigger Bot.",
           "Уменьшены ложные срабатывания от посторонних цветов, например желтого и оранжевого.",
           "Добавлена блокировка Mini Status / режим click-through.",
@@ -1664,7 +1691,7 @@ const versionHistoryContent = {
         ]
       },
       {
-        label: "Предыдущая",
+        label: "Старая beta-версия",
         title: "Версия v1.1 Beta",
         action: "versions",
         cta: "Посмотреть старые версии",
@@ -1678,15 +1705,28 @@ const versionHistoryContent = {
   },
   uk: {
     title: "Історія версій.",
-    copy: "Поточна версія сайту та застосунку: v1.2 Beta.",
+    copy: "Поточна версія сайту та застосунку: v1.2.1 Beta.",
     versions: [
       {
         label: "Актуальна",
-        title: "Версія v1.2 Beta",
+        title: "Версія v1.2.1 Beta",
         action: "download",
-        cta: "Встановити v1.2 Beta",
+        cta: "Встановити v1.2.1 Beta",
         items: [
-          "Рекомендована версія для більшості користувачів.",
+          "Оновлення сумісності.",
+          "Виправлено проблему залежності від VC++ Runtime.",
+          "RapidyCore та інсталятор перескладені зі статичним MSVC runtime.",
+          "RapidyCore більше не повинен вимагати ручного встановлення Microsoft Visual C++ Redistributable лише для запуску застосунку або інсталятора.",
+          "Загальне очищення сумісності."
+        ]
+      },
+      {
+        label: "Попередня beta-версія",
+        title: "Версія v1.2 Beta",
+        action: "versions",
+        cta: "Переглянути старі версії",
+        items: [
+          "Основне оновлення функцій і стабільності v1.2.",
           "Покращено розпізнавання кольору в Trigger Bot.",
           "Зменшено хибні спрацювання від сторонніх кольорів, наприклад жовтого та помаранчевого.",
           "Додано блокування Mini Status / режим click-through.",
@@ -1697,7 +1737,7 @@ const versionHistoryContent = {
         ]
       },
       {
-        label: "Попередня",
+        label: "Стара beta-версія",
         title: "Версія v1.1 Beta",
         action: "versions",
         cta: "Переглянути старі версії",
@@ -1715,20 +1755,20 @@ const versionsContent = {
   en: {
     kicker: "Old versions",
     title: "Available builds.",
-    copy: "v1.2 Beta is recommended for most users. v1.1 Beta remains available as an older build.",
+    copy: "Previous RapidyCore builds are available here. The latest v1.2.1 Beta is available in the main download section above.",
     entries: [
       {
-        badge: "Current version",
+        badge: "Previous beta",
         title: "Beta 1.2",
-        text: "Current recommended version.",
-        href: releaseDownloads.latest,
-        button: "Install v1.2 Beta"
+        text: "Main v1.2 feature/stability update.",
+        href: releaseDownloads.previous,
+        button: "Download v1.2 Beta"
       },
       {
-        badge: "Previous beta",
+        badge: "Older beta",
         title: "Beta 1.1",
         text: "Kept available for users who need the older build.",
-        href: releaseDownloads.previous,
+        href: releaseDownloads.older,
         button: "Download v1.1 Beta"
       }
     ]
@@ -1736,20 +1776,20 @@ const versionsContent = {
   ru: {
     kicker: "Старые версии",
     title: "Доступные сборки.",
-    copy: "v1.2 Beta рекомендуется для большинства пользователей. v1.1 Beta остается доступной как старая сборка.",
+    copy: "Здесь доступны предыдущие сборки RapidyCore. Актуальная v1.2.1 Beta находится в основном разделе загрузки выше.",
     entries: [
       {
-        badge: "Актуальная",
+        badge: "Предыдущая beta-версия",
         title: "Beta 1.2",
-        text: "Рекомендуемая версия для большинства пользователей.",
-        href: releaseDownloads.latest,
-        button: "Установить v1.2 Beta"
+        text: "Основное обновление функций и стабильности v1.2.",
+        href: releaseDownloads.previous,
+        button: "Скачать v1.2 Beta"
       },
       {
-        badge: "Предыдущая",
+        badge: "Старая beta-версия",
         title: "Beta 1.1",
         text: "Оставлена доступной для пользователей, которым нужна старая сборка.",
-        href: releaseDownloads.previous,
+        href: releaseDownloads.older,
         button: "Скачать v1.1 Beta"
       }
     ]
@@ -1757,20 +1797,20 @@ const versionsContent = {
   uk: {
     kicker: "Старі версії",
     title: "Доступні збірки.",
-    copy: "v1.2 Beta рекомендована для більшості користувачів. v1.1 Beta залишається доступною як стара збірка.",
+    copy: "Тут доступні попередні збірки RapidyCore. Актуальна v1.2.1 Beta знаходиться в основному розділі завантаження вище.",
     entries: [
       {
-        badge: "Актуальна",
+        badge: "Попередня beta-версія",
         title: "Beta 1.2",
-        text: "Рекомендована версія для більшості користувачів.",
-        href: releaseDownloads.latest,
-        button: "Встановити v1.2 Beta"
+        text: "Основне оновлення функцій і стабільності v1.2.",
+        href: releaseDownloads.previous,
+        button: "Завантажити v1.2 Beta"
       },
       {
-        badge: "Попередня",
+        badge: "Стара beta-версія",
         title: "Beta 1.1",
         text: "Залишена доступною для користувачів, яким потрібна стара збірка.",
-        href: releaseDownloads.previous,
+        href: releaseDownloads.older,
         button: "Завантажити v1.1 Beta"
       }
     ]
@@ -1787,30 +1827,32 @@ Object.assign(translations.en.hero, {
 });
 
 Object.assign(downloadContent.en, {
-  title: "RapidyCore v1.2 Beta is available.",
-  button: "Install v1.2 Beta",
-  versionValue: "v1.2 Beta",
-  note: "Beta build. A practical LMB Spam starting point is 4-6 ms. Windows may ask for confirmation, and the installer still includes the optional Microsoft Defender exclusion step.",
-  safetyItem: "Official website download includes the current v1.2 Beta installer.",
-  faqAnswer: "Yes. The official Windows installer for RapidyCore v1.2 Beta is available in the download section.",
+  title: "RapidyCore v1.2.1 Beta is available.",
+  button: "Install v1.2.1 Beta",
+  versionValue: "v1.2.1 Beta",
+  note: "Beta compatibility update. RapidyCore and the installer were rebuilt with static MSVC runtime to fix the VC++ Runtime dependency issue.",
+  safetyItem: "Official website download includes the current v1.2.1 Beta installer.",
+  faqAnswer: "Yes. The official Windows installer for RapidyCore v1.2.1 Beta is available in the download section.",
   oldVersionsButton: "View old versions"
 });
 
 Object.assign(downloadContent.ru, {
-  title: "RapidyCore v1.2 Beta is available.",
-  button: "Установить v1.2 Beta",
-  versionValue: "v1.2 Beta",
-  safetyItem: "Official website download includes the current v1.2 Beta installer.",
-  faqAnswer: "The official Windows installer for RapidyCore v1.2 Beta is available in the download section.",
+  title: "RapidyCore v1.2.1 Beta доступна.",
+  button: "Установить v1.2.1 Beta",
+  versionValue: "v1.2.1 Beta",
+  note: "Beta-обновление совместимости. RapidyCore и установщик пересобраны со статическим MSVC runtime, чтобы исправить проблему зависимости от VC++ Runtime.",
+  safetyItem: "На официальном сайте доступен текущий установщик v1.2.1 Beta.",
+  faqAnswer: "Да. Официальный установщик Windows для RapidyCore v1.2.1 Beta доступен в разделе скачивания.",
   oldVersionsButton: "Посмотреть старые версии"
 });
 
 Object.assign(downloadContent.uk, {
-  title: "RapidyCore v1.2 Beta is available.",
-  button: "Встановити v1.2 Beta",
-  versionValue: "v1.2 Beta",
-  safetyItem: "Official website download includes the current v1.2 Beta installer.",
-  faqAnswer: "The official Windows installer for RapidyCore v1.2 Beta is available in the download section.",
+  title: "RapidyCore v1.2.1 Beta доступна.",
+  button: "Встановити v1.2.1 Beta",
+  versionValue: "v1.2.1 Beta",
+  note: "Beta-оновлення сумісності. RapidyCore та інсталятор перескладені зі статичним MSVC runtime, щоб виправити проблему залежності від VC++ Runtime.",
+  safetyItem: "На офіційному сайті доступний поточний інсталятор v1.2.1 Beta.",
+  faqAnswer: "Так. Офіційний інсталятор Windows для RapidyCore v1.2.1 Beta доступний у розділі завантаження.",
   oldVersionsButton: "Переглянути старі версії"
 });
 
@@ -2459,7 +2501,7 @@ function renderVersions(lang) {
 
   versions.entries.forEach((entry, index) => {
     const card = document.createElement("article");
-    card.className = index === 0 ? "version-card is-current" : "version-card";
+    card.className = "version-card";
 
     const badge = document.createElement("span");
     badge.className = "changelog-tag";
