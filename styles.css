@@ -1214,6 +1214,8 @@ h3 {
   color: var(--text);
   font-size: clamp(44px, 7vw, 82px);
   line-height: 1.02;
+  overflow-wrap: anywhere;
+  text-wrap: balance;
 }
 
 .legal-hero .lead {
@@ -1246,6 +1248,8 @@ h3 {
   color: var(--text);
   font-size: 22px;
   line-height: 1.25;
+  overflow-wrap: anywhere;
+  text-wrap: balance;
 }
 
 .legal-list {
@@ -1432,6 +1436,12 @@ h3 {
     padding: 42px 0 34px;
   }
 
+  .legal-hero h1 {
+    max-width: 100%;
+    font-size: clamp(32px, 6.8vw, 42px);
+    line-height: 1.08;
+  }
+
   h1 {
     font-size: 42px;
   }
@@ -1564,6 +1574,11 @@ h3 {
   .lang-button {
     flex: 1 1 0;
     min-width: 0;
+  }
+
+  .legal-hero h1 {
+    font-size: clamp(30px, 8vw, 36px);
+    line-height: 1.08;
   }
 
   h1 {
