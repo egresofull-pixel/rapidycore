@@ -1,9 +1,10 @@
-const STORAGE_KEY = "rapidycore-language";
+﻿const STORAGE_KEY = "rapidycore-language";
 const supportedLanguages = ["en", "ru", "uk"];
 const releaseDownloads = {
-  latest: "downloads/RapidyCoreInstall-1.2.1-Beta.exe",
-  previous: "downloads/RapidyCoreInstall-1.2-Beta.exe",
-  older: "downloads/RapidyCoreInstall-1.1-Beta.exe"
+  latest: "downloads/RapidyCoreInstall-1.2.2-Beta.exe",
+  previous: "downloads/RapidyCoreInstall-1.2.1-Beta.exe",
+  older: "downloads/RapidyCoreInstall-1.2-Beta.exe",
+  oldest: "downloads/RapidyCoreInstall-1.1-Beta.exe"
 };
 
 const translations = {
@@ -130,14 +131,14 @@ const translations = {
     },
     download: {
       kicker: "Release status",
-      title: "RapidyCore v1.2.1 Beta is available.",
+      title: "RapidyCore v1.2.2 Beta is available.",
       copy: "Use the official Windows installer below. Privacy and Terms stay available before you install.",
       button: "Download installer"
     },
     changelog: {
       kicker: "Versions",
       title: "Version history.",
-      copy: "Current website and app version: v1.2.1 Beta.",
+      copy: "Current website and app version: v1.2.2 Beta.",
       betaNotePrefix: "RapidyCore is currently in beta. Bugs are possible. Please report issues through Telegram: ",
       betaNoteSuffix: " or in RapidyCore™ Chat|Bug reports.",
       versions: [
@@ -880,44 +881,44 @@ const previewContent = {
 const downloadContent = {
   en: {
     kicker: "Download",
-    title: "RapidyCore v1.2.1 Beta is available.",
+    title: "RapidyCore v1.2.2 Beta is available.",
     copy: "Use the official Windows installer below. Privacy and Terms stay available before you install.",
     button: "Download installer",
     versionLabel: "Version",
-    versionValue: "v1.2.1 Beta",
+    versionValue: "v1.2.2 Beta",
     typeLabel: "File type",
     typeValue: "Windows installer",
     note: "Beta build. Windows may ask for confirmation, and the installer still includes the optional Microsoft Defender exclusion step.",
     safetyItem: "Official website download includes the current beta installer.",
-    faqAnswer: "Yes. The official Windows installer for RapidyCore v1.2.1 Beta is available in the download section.",
+    faqAnswer: "Yes. The official Windows installer for RapidyCore v1.2.2 Beta is available in the download section.",
     unavailableToast: "Version 1.0 Beta is not available for download or install."
   },
   ru: {
     kicker: "Скачать",
-    title: "RapidyCore v1.2.1 Beta доступна.",
+    title: "RapidyCore v1.2.2 Beta доступна.",
     copy: "Ниже размещен официальный установщик для Windows. Privacy и Terms по-прежнему доступны перед установкой.",
     button: "Скачать установщик",
     versionLabel: "Версия",
-    versionValue: "v1.2.1 Beta",
+    versionValue: "v1.2.2 Beta",
     typeLabel: "Тип файла",
     typeValue: "Установщик Windows",
     note: "Бета-сборка. Windows может запросить подтверждение, а в установщике по-прежнему есть опциональный шаг с исключением Microsoft Defender.",
     safetyItem: "На официальном сайте доступен текущий бета-установщик.",
-    faqAnswer: "Да. Официальный установщик Windows для RapidyCore v1.2.1 Beta доступен в разделе скачивания.",
+    faqAnswer: "Да. Официальный установщик Windows для RapidyCore v1.2.2 Beta доступен в разделе скачивания.",
     unavailableToast: "Version 1.0 Beta пока недоступен для скачивания и установки."
   },
   uk: {
     kicker: "Завантаження",
-    title: "RapidyCore v1.2.1 Beta доступна.",
+    title: "RapidyCore v1.2.2 Beta доступна.",
     copy: "Нижче розміщено офіційний інсталятор для Windows. Privacy і Terms, як і раніше, доступні перед встановленням.",
     button: "Завантажити інсталятор",
     versionLabel: "Версія",
-    versionValue: "v1.2.1 Beta",
+    versionValue: "v1.2.2 Beta",
     typeLabel: "Тип файла",
     typeValue: "Інсталятор Windows",
     note: "Бета-збірка. Windows може попросити підтвердження, а в інсталяторі як і раніше є опціональний крок із винятком Microsoft Defender.",
     safetyItem: "На офіційному сайті доступний поточний бета-інсталятор.",
-    faqAnswer: "Так. Офіційний інсталятор Windows для RapidyCore v1.2.1 Beta доступний у розділі завантаження.",
+    faqAnswer: "Так. Офіційний інсталятор Windows для RapidyCore v1.2.2 Beta доступний у розділі завантаження.",
     unavailableToast: "Version 1.0 Beta поки недоступний для завантаження та встановлення."
   }
 };
@@ -948,7 +949,7 @@ const supportContent = {
 
 const changelogContent = {
   en: {
-    copy: "Current website and app version: v1.2.1 Beta.",
+    copy: "Current website and app version: v1.2.2 Beta.",
     betaNotePrefix: "RapidyCore is currently in beta. Bugs are possible. Please report issues through Telegram: ",
     betaNoteSuffix: " or in the RapidyCore Telegram chat.",
     versions: [
@@ -1146,7 +1147,7 @@ Object.assign(translations.en.faq, {
     },
     {
       question: "Is the download public yet?",
-      answer: "The official Windows installer for RapidyCore v1.2.1 Beta is available in the download section."
+      answer: "The official Windows installer for RapidyCore v1.2.2 Beta is available in the download section."
     }
   ]
 });
@@ -1204,10 +1205,10 @@ translations.en.setup = {
 };
 
 Object.assign(downloadContent.en, {
-  title: "RapidyCore v1.2.1 Beta is available.",
+  title: "RapidyCore v1.2.2 Beta is available.",
   note: "Beta build. Windows may ask for confirmation, and the installer still includes the optional Microsoft Defender exclusion step.",
   safetyItem: "Official website download includes the current beta installer.",
-  faqAnswer: "The official Windows installer for RapidyCore v1.2.1 Beta is available in the download section."
+  faqAnswer: "The official Windows installer for RapidyCore v1.2.2 Beta is available in the download section."
 });
 
 downloadContent.en.freeNote = "RapidyCore is free. Donations are optional.";
@@ -1225,7 +1226,7 @@ translations.ru.footer.donate = "Донат";
 translations.uk.footer.donate = "Донат";
 
 Object.assign(changelogContent.en, {
-  copy: "Current website and app version: v1.2.1 Beta."
+  copy: "Current website and app version: v1.2.2 Beta."
 });
 changelogContent.en.versions[0].title = "Version 1.1 Beta";
 
@@ -1338,20 +1339,20 @@ Object.assign(translations.ru.faq, {
     },
     {
       question: "Скачивание уже публичное?",
-      answer: "Официальный установщик Windows для RapidyCore v1.2.1 Beta доступен в разделе скачивания."
+      answer: "Официальный установщик Windows для RapidyCore v1.2.2 Beta доступен в разделе скачивания."
     }
   ]
 });
 
 Object.assign(downloadContent.ru, {
-  title: "RapidyCore v1.2.1 Beta для Blade Ball",
+  title: "RapidyCore v1.2.2 Beta для Blade Ball",
   note: "Бета-сборка для текущего сценария Blade Ball. Windows может запросить подтверждение, а в установщике по-прежнему есть опциональный шаг с исключением Microsoft Defender.",
   safetyItem: "На официальном сайте доступен текущий бета-установщик для Blade Ball.",
-  faqAnswer: "Официальный установщик Windows для RapidyCore v1.2.1 Beta доступен в разделе скачивания."
+  faqAnswer: "Официальный установщик Windows для RapidyCore v1.2.2 Beta доступен в разделе скачивания."
 });
 
 Object.assign(changelogContent.ru, {
-  copy: "Текущая версия сайта и приложения: RapidyCore v1.2.1 Beta."
+  copy: "Текущая версия сайта и приложения: RapidyCore v1.2.2 Beta."
 });
 changelogContent.ru.versions[0].title = "Версия v1.2.1 Beta";
 
@@ -1464,20 +1465,20 @@ Object.assign(translations.uk.faq, {
     },
     {
       question: "Завантаження вже публічне?",
-      answer: "Офіційний інсталятор Windows для RapidyCore v1.2.1 Beta доступний у розділі завантаження."
+      answer: "Офіційний інсталятор Windows для RapidyCore v1.2.2 Beta доступний у розділі завантаження."
     }
   ]
 });
 
 Object.assign(downloadContent.uk, {
-  title: "RapidyCore v1.2.1 Beta для Blade Ball",
+  title: "RapidyCore v1.2.2 Beta для Blade Ball",
   note: "Бета-збірка для поточного сценарію Blade Ball. Windows може попросити підтвердження, а в інсталяторі, як і раніше, є опціональний крок із винятком Microsoft Defender.",
   safetyItem: "На офіційному сайті доступний поточний бета-інсталятор для Blade Ball.",
-  faqAnswer: "Офіційний інсталятор Windows для RapidyCore v1.2.1 Beta доступний у розділі завантаження."
+  faqAnswer: "Офіційний інсталятор Windows для RapidyCore v1.2.2 Beta доступний у розділі завантаження."
 });
 
 Object.assign(changelogContent.uk, {
-  copy: "Поточна версія сайту й застосунку: RapidyCore v1.2.1 Beta."
+  copy: "Поточна версія сайту й застосунку: RapidyCore v1.2.2 Beta."
 });
 changelogContent.uk.versions[0].title = "Версія v1.2.1 Beta";
 
@@ -1554,28 +1555,28 @@ Object.assign(previewContent.uk, {
 });
 
 Object.assign(downloadContent.en, {
-  title: "RapidyCore v1.2.1 Beta is available.",
+  title: "RapidyCore v1.2.2 Beta is available.",
   note: "Beta build. A practical LMB Spam starting point is 4-6 ms. Windows may ask for confirmation, and the installer still includes the optional Microsoft Defender exclusion step.",
   safetyItem: "Official website download includes the current beta installer.",
-  faqAnswer: "Yes. The official Windows installer for RapidyCore v1.2.1 Beta is available in the download section."
+  faqAnswer: "Yes. The official Windows installer for RapidyCore v1.2.2 Beta is available in the download section."
 });
 
 Object.assign(downloadContent.ru, {
-  title: "RapidyCore v1.2.1 Beta доступна.",
+  title: "RapidyCore v1.2.2 Beta доступна.",
   note: "Бета-сборка. Для Spam ЛКМ практичная стартовая настройка — 4-6 мс. Windows может запросить подтверждение, а в установщике по-прежнему есть опциональный шаг с исключением Microsoft Defender.",
   safetyItem: "На официальном сайте доступен текущий бета-установщик.",
-  faqAnswer: "Да. Официальный установщик Windows для RapidyCore v1.2.1 Beta доступен в разделе скачивания."
+  faqAnswer: "Да. Официальный установщик Windows для RapidyCore v1.2.2 Beta доступен в разделе скачивания."
 });
 
 Object.assign(downloadContent.uk, {
-  title: "RapidyCore v1.2.1 Beta доступна.",
+  title: "RapidyCore v1.2.2 Beta доступна.",
   note: "Бета-збірка. Для Spam ЛКМ практичний стартовий діапазон — 4-6 мс. Windows може попросити підтвердження, а в інсталяторі, як і раніше, є опціональний крок із винятком Microsoft Defender.",
   safetyItem: "На офіційному сайті доступний поточний бета-інсталятор.",
-  faqAnswer: "Так. Офіційний інсталятор Windows для RapidyCore v1.2.1 Beta доступний у розділі завантаження."
+  faqAnswer: "Так. Офіційний інсталятор Windows для RapidyCore v1.2.2 Beta доступний у розділі завантаження."
 });
 
 Object.assign(changelogContent.en, {
-  copy: "Current website and app version: v1.2.1 Beta.",
+  copy: "Current website and app version: v1.2.2 Beta.",
   betaNotePrefix: "RapidyCore is currently in beta. Bugs are possible. Follow us on Telegram: ",
   betaNoteSuffix: "."
 });
@@ -1613,10 +1614,22 @@ translations.uk.faq.items.splice(translations.uk.faq.items.length - 1, 0, {
 const versionHistoryContent = {
   en: {
     title: "Version history.",
-    copy: "Current website and app version: v1.2.1 Beta.",
+    copy: "Current website and app version: v1.2.2 Beta.",
     versions: [
       {
         label: "Latest",
+        title: "Version v1.2.2 Beta",
+        action: "download",
+        cta: "Install v1.2.2 Beta",
+        items: [
+          "Migrated RapidyCore from Win32 (x86) to Win64 (x64).",
+          "Improved compatibility with modern 64-bit Windows systems.",
+          "Improved installer messages with clearer, user-friendly text.",
+          "Various internal optimizations and stability improvements."
+        ]
+      },
+      {
+        label: "Previous beta",
         title: "Version v1.2.1 Beta",
         action: "download",
         cta: "Install v1.2.1 Beta",
@@ -1629,7 +1642,7 @@ const versionHistoryContent = {
         ]
       },
       {
-        label: "Previous beta",
+        label: "Older beta",
         title: "Version v1.2 Beta",
         action: "versions",
         cta: "View old versions",
@@ -1645,7 +1658,7 @@ const versionHistoryContent = {
         ]
       },
       {
-        label: "Older beta",
+        label: "Old beta",
         title: "Version v1.1 Beta",
         action: "versions",
         cta: "View old versions",
@@ -1659,10 +1672,22 @@ const versionHistoryContent = {
   },
   ru: {
     title: "История версий.",
-    copy: "Текущая версия сайта и приложения: v1.2.1 Beta.",
+    copy: "Текущая версия сайта и приложения: v1.2.2 Beta.",
     versions: [
       {
         label: "Актуальная",
+        title: "Версия v1.2.2 Beta",
+        action: "download",
+        cta: "Установить v1.2.2 Beta",
+        items: [
+          "Переход RapidyCore с Win32 (x86) на Win64 (x64).",
+          "Улучшена совместимость с современными 64-битными системами Windows.",
+          "Улучшены сообщения установщика с более понятным и дружелюбным текстом.",
+          "Различные внутренние оптимизации и улучшения стабильности."
+        ]
+      },
+      {
+        label: "Предыдущая beta-версия",
         title: "Версия v1.2.1 Beta",
         action: "download",
         cta: "Установить v1.2.1 Beta",
@@ -1675,7 +1700,7 @@ const versionHistoryContent = {
         ]
       },
       {
-        label: "Предыдущая beta-версия",
+        label: "Старая beta-версия",
         title: "Версия v1.2 Beta",
         action: "versions",
         cta: "Посмотреть старые версии",
@@ -1705,10 +1730,22 @@ const versionHistoryContent = {
   },
   uk: {
     title: "Історія версій.",
-    copy: "Поточна версія сайту та застосунку: v1.2.1 Beta.",
+    copy: "Поточна версія сайту та застосунку: v1.2.2 Beta.",
     versions: [
       {
         label: "Актуальна",
+        title: "Версія v1.2.2 Beta",
+        action: "download",
+        cta: "Встановити v1.2.2 Beta",
+        items: [
+          "Перехід RapidyCore з Win32 (x86) на Win64 (x64).",
+          "Покращено сумісність із сучасними 64-бітними системами Windows.",
+          "Покращено повідомлення інсталятора зі зрозумілішим і дружнім текстом.",
+          "Різні внутрішні оптимізації та покращення стабільності."
+        ]
+      },
+      {
+        label: "Попередня beta-версія",
         title: "Версія v1.2.1 Beta",
         action: "download",
         cta: "Встановити v1.2.1 Beta",
@@ -1721,7 +1758,7 @@ const versionHistoryContent = {
         ]
       },
       {
-        label: "Попередня beta-версія",
+        label: "Стара beta-версія",
         title: "Версія v1.2 Beta",
         action: "versions",
         cta: "Переглянути старі версії",
@@ -1755,20 +1792,27 @@ const versionsContent = {
   en: {
     kicker: "Old versions",
     title: "Available builds.",
-    copy: "Previous RapidyCore builds are available here. The latest v1.2.1 Beta is available in the main download section above.",
+    copy: "Previous RapidyCore builds are available here. The latest v1.2.2 Beta is available in the main download section above.",
     entries: [
       {
         badge: "Previous beta",
-        title: "Beta 1.2",
-        text: "Main v1.2 feature/stability update.",
+        title: "Beta 1.2.1",
+        text: "Previous compatibility update. Static MSVC runtime build. Kept available for users who need the previous release.",
         href: releaseDownloads.previous,
-        button: "Download v1.2 Beta"
+        button: "Download v1.2.1 Beta"
       },
       {
         badge: "Older beta",
+        title: "Beta 1.2",
+        text: "Main v1.2 feature/stability update.",
+        href: releaseDownloads.older,
+        button: "Download v1.2 Beta"
+      },
+      {
+        badge: "Old beta",
         title: "Beta 1.1",
         text: "Kept available for users who need the older build.",
-        href: releaseDownloads.older,
+        href: releaseDownloads.oldest,
         button: "Download v1.1 Beta"
       }
     ]
@@ -1776,20 +1820,27 @@ const versionsContent = {
   ru: {
     kicker: "Старые версии",
     title: "Доступные сборки.",
-    copy: "Здесь доступны предыдущие сборки RapidyCore. Актуальная v1.2.1 Beta находится в основном разделе загрузки выше.",
+    copy: "Здесь доступны предыдущие сборки RapidyCore. Актуальная v1.2.2 Beta находится в основном разделе загрузки выше.",
     entries: [
       {
         badge: "Предыдущая beta-версия",
+        title: "Beta 1.2.1",
+        text: "Предыдущее обновление совместимости. Сборка со статическим MSVC runtime. Оставлена доступной для пользователей, которым нужна предыдущая версия.",
+        href: releaseDownloads.previous,
+        button: "Скачать v1.2.1 Beta"
+      },
+      {
+        badge: "Старая beta-версия",
         title: "Beta 1.2",
         text: "Основное обновление функций и стабильности v1.2.",
-        href: releaseDownloads.previous,
+        href: releaseDownloads.older,
         button: "Скачать v1.2 Beta"
       },
       {
         badge: "Старая beta-версия",
         title: "Beta 1.1",
         text: "Оставлена доступной для пользователей, которым нужна старая сборка.",
-        href: releaseDownloads.older,
+        href: releaseDownloads.oldest,
         button: "Скачать v1.1 Beta"
       }
     ]
@@ -1797,20 +1848,27 @@ const versionsContent = {
   uk: {
     kicker: "Старі версії",
     title: "Доступні збірки.",
-    copy: "Тут доступні попередні збірки RapidyCore. Актуальна v1.2.1 Beta знаходиться в основному розділі завантаження вище.",
+    copy: "Тут доступні попередні збірки RapidyCore. Актуальна v1.2.2 Beta знаходиться в основному розділі завантаження вище.",
     entries: [
       {
         badge: "Попередня beta-версія",
+        title: "Beta 1.2.1",
+        text: "Попереднє оновлення сумісності. Збірка зі статичним MSVC runtime. Залишена доступною для користувачів, яким потрібна попередня версія.",
+        href: releaseDownloads.previous,
+        button: "Завантажити v1.2.1 Beta"
+      },
+      {
+        badge: "Стара beta-версія",
         title: "Beta 1.2",
         text: "Основне оновлення функцій і стабільності v1.2.",
-        href: releaseDownloads.previous,
+        href: releaseDownloads.older,
         button: "Завантажити v1.2 Beta"
       },
       {
         badge: "Стара beta-версія",
         title: "Beta 1.1",
         text: "Залишена доступною для користувачів, яким потрібна стара збірка.",
-        href: releaseDownloads.older,
+        href: releaseDownloads.oldest,
         button: "Завантажити v1.1 Beta"
       }
     ]
@@ -1827,32 +1885,32 @@ Object.assign(translations.en.hero, {
 });
 
 Object.assign(downloadContent.en, {
-  title: "RapidyCore v1.2.1 Beta is available.",
-  button: "Install v1.2.1 Beta",
-  versionValue: "v1.2.1 Beta",
-  note: "Beta compatibility update. RapidyCore and the installer were rebuilt with static MSVC runtime to fix the VC++ Runtime dependency issue.",
-  safetyItem: "Official website download includes the current v1.2.1 Beta installer.",
-  faqAnswer: "Yes. The official Windows installer for RapidyCore v1.2.1 Beta is available in the download section.",
+  title: "RapidyCore v1.2.2 Beta is available.",
+  button: "Install v1.2.2 Beta",
+  versionValue: "v1.2.2 Beta",
+  note: "Win64 compatibility update. RapidyCore has been migrated from Win32 (x86) to Win64 (x64), with installer usability improvements.",
+  safetyItem: "Official website download includes the current v1.2.2 Beta installer.",
+  faqAnswer: "Yes. The official Windows installer for RapidyCore v1.2.2 Beta is available in the download section.",
   oldVersionsButton: "View old versions"
 });
 
 Object.assign(downloadContent.ru, {
-  title: "RapidyCore v1.2.1 Beta доступна.",
-  button: "Установить v1.2.1 Beta",
-  versionValue: "v1.2.1 Beta",
-  note: "Beta-обновление совместимости. RapidyCore и установщик пересобраны со статическим MSVC runtime, чтобы исправить проблему зависимости от VC++ Runtime.",
-  safetyItem: "На официальном сайте доступен текущий установщик v1.2.1 Beta.",
-  faqAnswer: "Да. Официальный установщик Windows для RapidyCore v1.2.1 Beta доступен в разделе скачивания.",
+  title: "RapidyCore v1.2.2 Beta доступна.",
+  button: "Установить v1.2.2 Beta",
+  versionValue: "v1.2.2 Beta",
+  note: "Обновление совместимости Win64. RapidyCore перенесён с Win32 (x86) на Win64 (x64), а также улучшено удобство работы установщика.",
+  safetyItem: "На официальном сайте доступен текущий установщик v1.2.2 Beta.",
+  faqAnswer: "Да. Официальный установщик Windows для RapidyCore v1.2.2 Beta доступен в разделе скачивания.",
   oldVersionsButton: "Посмотреть старые версии"
 });
 
 Object.assign(downloadContent.uk, {
-  title: "RapidyCore v1.2.1 Beta доступна.",
-  button: "Встановити v1.2.1 Beta",
-  versionValue: "v1.2.1 Beta",
-  note: "Beta-оновлення сумісності. RapidyCore та інсталятор перескладені зі статичним MSVC runtime, щоб виправити проблему залежності від VC++ Runtime.",
-  safetyItem: "На офіційному сайті доступний поточний інсталятор v1.2.1 Beta.",
-  faqAnswer: "Так. Офіційний інсталятор Windows для RapidyCore v1.2.1 Beta доступний у розділі завантаження.",
+  title: "RapidyCore v1.2.2 Beta доступна.",
+  button: "Встановити v1.2.2 Beta",
+  versionValue: "v1.2.2 Beta",
+  note: "Оновлення сумісності Win64. RapidyCore перенесено з Win32 (x86) на Win64 (x64), а також покращено зручність роботи інсталятора.",
+  safetyItem: "На офіційному сайті доступний поточний інсталятор v1.2.2 Beta.",
+  faqAnswer: "Так. Офіційний інсталятор Windows для RapidyCore v1.2.2 Beta доступний у розділі завантаження.",
   oldVersionsButton: "Переглянути старі версії"
 });
 
