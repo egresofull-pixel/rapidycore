@@ -1,10 +1,11 @@
 ﻿const STORAGE_KEY = "rapidycore-language";
 const supportedLanguages = ["en", "ru", "uk"];
 const releaseDownloads = {
-  latest: "downloads/RapidyCoreInstall-1.2.2-Beta.exe",
-  previous: "downloads/RapidyCoreInstall-1.2.1-Beta.exe",
-  older: "downloads/RapidyCoreInstall-1.2-Beta.exe",
-  oldest: "downloads/RapidyCoreInstall-1.1-Beta.exe"
+  latest: "downloads/RapidyCoreInstall-1.3-Beta.exe",
+  previous: "downloads/RapidyCoreInstall-1.2.2-Beta.exe",
+  older: "downloads/RapidyCoreInstall-1.2.1-Beta.exe",
+  oldest: "downloads/RapidyCoreInstall-1.2-Beta.exe",
+  v11: "downloads/RapidyCoreInstall-1.1-Beta.exe"
 };
 
 const translations = {
@@ -201,7 +202,7 @@ const translations = {
         },
         {
           question: "Why does the installer offer Microsoft Defender exclusion?",
-          answer: "The option is intended to be explicit and user-controlled. It is optional, and the website should describe it as an installer choice rather than a hidden behavior."
+          answer: "RapidyCore does not require Microsoft Defender to be disabled. Some automation features may occasionally be detected as suspicious, so the installer optionally offers adding the application folder to Defender exclusions. This helps reduce false positives and accidental file removal. The choice is always yours."
         },
         {
           question: "Is the download public yet?",
@@ -409,7 +410,7 @@ const translations = {
         },
         {
           question: "Почему установщик предлагает исключение Microsoft Defender?",
-          answer: "Эта опция должна быть явной и управляемой пользователем. Она необязательна, а сайт должен описывать ее как выбор установщика, а не скрытое поведение."
+          answer: "RapidyCore не требует отключения Microsoft Defender. Некоторые функции автоматизации могут иногда ошибочно определяться как подозрительные, поэтому установщик по желанию предлагает добавить папку программы в исключения Defender. Это помогает снизить вероятность ложных срабатываний и случайного удаления файлов. Решение всегда остаётся за пользователем."
         },
         {
           question: "Скачивание уже публичное?",
@@ -616,7 +617,7 @@ const translations = {
         },
         {
           question: "Чому інсталятор пропонує виняток Microsoft Defender?",
-          answer: "Ця опція має бути явною та керованою користувачем. Вона необов'язкова, а сайт має описувати її як вибір інсталятора, а не приховану поведінку."
+          answer: "RapidyCore не потребує вимкнення Microsoft Defender. Деякі функції автоматизації можуть іноді помилково визначатися як підозрілі, тому інсталятор за бажанням пропонує додати папку програми до винятків Defender. Це допомагає зменшити кількість хибних спрацьовувань і випадкового видалення файлів. Остаточне рішення завжди залишається за користувачем."
         },
         {
           question: "Завантаження вже публічне?",
@@ -881,44 +882,44 @@ const previewContent = {
 const downloadContent = {
   en: {
     kicker: "Download",
-    title: "RapidyCore v1.2.2 Beta is available.",
+    title: "RapidyCore v1.3 Beta is available.",
     copy: "Use the official Windows installer below. Privacy and Terms stay available before you install.",
     button: "Download installer",
     versionLabel: "Version",
-    versionValue: "v1.2.2 Beta",
+    versionValue: "v1.3 Beta",
     typeLabel: "File type",
     typeValue: "Windows installer",
-    note: "Beta build. Windows may ask for confirmation, and the installer still includes the optional Microsoft Defender exclusion step.",
+    note: "Major feature update. Trigger Bot has received advanced color tolerance controls, Rapid Click (Experimental), a redesigned startup experience, and numerous interface improvements.",
     safetyItem: "Official website download includes the current beta installer.",
-    faqAnswer: "Yes. The official Windows installer for RapidyCore v1.2.2 Beta is available in the download section.",
+    faqAnswer: "Yes. The official Windows installer for RapidyCore v1.3 Beta is now available in the download section.",
     unavailableToast: "Version 1.0 Beta is not available for download or install."
   },
   ru: {
     kicker: "Скачать",
-    title: "RapidyCore v1.2.2 Beta доступна.",
+    title: "RapidyCore v1.3 Beta доступна.",
     copy: "Ниже размещен официальный установщик для Windows. Privacy и Terms по-прежнему доступны перед установкой.",
     button: "Скачать установщик",
     versionLabel: "Версия",
-    versionValue: "v1.2.2 Beta",
+    versionValue: "v1.3 Beta",
     typeLabel: "Тип файла",
     typeValue: "Установщик Windows",
-    note: "Бета-сборка. Windows может запросить подтверждение, а в установщике по-прежнему есть опциональный шаг с исключением Microsoft Defender.",
+    note: "Большое обновление функций. Trigger Bot получил расширенные настройки цветового допуска, Rapid Click (Экспериментальный), переработанный интерфейс запуска и множество улучшений интерфейса.",
     safetyItem: "На официальном сайте доступен текущий бета-установщик.",
-    faqAnswer: "Да. Официальный установщик Windows для RapidyCore v1.2.2 Beta доступен в разделе скачивания.",
+    faqAnswer: "Да. Официальный установщик Windows для RapidyCore v1.3 Beta теперь доступен в разделе скачивания.",
     unavailableToast: "Version 1.0 Beta пока недоступен для скачивания и установки."
   },
   uk: {
     kicker: "Завантаження",
-    title: "RapidyCore v1.2.2 Beta доступна.",
+    title: "RapidyCore v1.3 Beta доступна.",
     copy: "Нижче розміщено офіційний інсталятор для Windows. Privacy і Terms, як і раніше, доступні перед встановленням.",
     button: "Завантажити інсталятор",
     versionLabel: "Версія",
-    versionValue: "v1.2.2 Beta",
+    versionValue: "v1.3 Beta",
     typeLabel: "Тип файла",
     typeValue: "Інсталятор Windows",
-    note: "Бета-збірка. Windows може попросити підтвердження, а в інсталяторі як і раніше є опціональний крок із винятком Microsoft Defender.",
+    note: "Велике оновлення функцій. Trigger Bot отримав розширені налаштування допуску кольору, Rapid Click (Експериментальний), перероблений інтерфейс запуску та численні покращення інтерфейсу.",
     safetyItem: "На офіційному сайті доступний поточний бета-інсталятор.",
-    faqAnswer: "Так. Офіційний інсталятор Windows для RapidyCore v1.2.2 Beta доступний у розділі завантаження.",
+    faqAnswer: "Так. Офіційний інсталятор Windows для RapidyCore v1.3 Beta тепер доступний у розділі завантаження.",
     unavailableToast: "Version 1.0 Beta поки недоступний для завантаження та встановлення."
   }
 };
@@ -1143,7 +1144,7 @@ Object.assign(translations.en.faq, {
     },
     {
       question: "Why does the installer offer Microsoft Defender exclusion?",
-      answer: "The option is intended to be explicit and user-controlled. It is optional, and the website should describe it as an installer choice rather than a hidden behavior."
+      answer: "RapidyCore does not require Microsoft Defender to be disabled. Some automation features may occasionally be detected as suspicious, so the installer optionally offers adding the application folder to Defender exclusions. This helps reduce false positives and accidental file removal. The choice is always yours."
     },
     {
       question: "Is the download public yet?",
@@ -1335,7 +1336,7 @@ Object.assign(translations.ru.faq, {
     },
     {
       question: "Почему установщик предлагает исключение Microsoft Defender?",
-      answer: "Эта опция должна оставаться явной и управляемой пользователем. Она необязательна и описывается как выбор в установщике."
+      answer: "RapidyCore не требует отключения Microsoft Defender. Некоторые функции автоматизации могут иногда ошибочно определяться как подозрительные, поэтому установщик по желанию предлагает добавить папку программы в исключения Defender. Это помогает снизить вероятность ложных срабатываний и случайного удаления файлов. Решение всегда остаётся за пользователем."
     },
     {
       question: "Скачивание уже публичное?",
@@ -1461,7 +1462,7 @@ Object.assign(translations.uk.faq, {
     },
     {
       question: "Чому інсталятор пропонує виняток Microsoft Defender?",
-      answer: "Ця опція має залишатися явною та керованою користувачем. Вона необов'язкова і описується як вибір в інсталяторі."
+      answer: "RapidyCore не потребує вимкнення Microsoft Defender. Деякі функції автоматизації можуть іноді помилково визначатися як підозрілі, тому інсталятор за бажанням пропонує додати папку програми до винятків Defender. Це допомагає зменшити кількість хибних спрацьовувань і випадкового видалення файлів. Остаточне рішення завжди залишається за користувачем."
     },
     {
       question: "Завантаження вже публічне?",
@@ -1614,10 +1615,27 @@ translations.uk.faq.items.splice(translations.uk.faq.items.length - 1, 0, {
 const versionHistoryContent = {
   en: {
     title: "Version history.",
-    copy: "Current website and app version: v1.2.2 Beta.",
+    copy: "Current website and app version: v1.3 Beta.",
     versions: [
       {
         label: "Latest",
+        title: "Version v1.3 Beta",
+        action: "download",
+        cta: "Install v1.3 Beta",
+        items: [
+          "Added configurable Color Tolerance for Trigger Bot.",
+          "Added real-time Color Range preview.",
+          "Added Rapid Click (Experimental).",
+          "Added detailed in-app tooltips for new features.",
+          "Improved Trigger Bot usability and color detection tuning.",
+          "Improved Mini Status visuals and interface polish.",
+          "Redesigned splash screen with smoother animations.",
+          "Faster startup through optimized image processing and caching.",
+          "Various UI refinements, performance optimizations and stability improvements."
+        ]
+      },
+      {
+        label: "Previous beta",
         title: "Version v1.2.2 Beta",
         action: "download",
         cta: "Install v1.2.2 Beta",
@@ -1629,7 +1647,7 @@ const versionHistoryContent = {
         ]
       },
       {
-        label: "Previous beta",
+        label: "Older beta",
         title: "Version v1.2.1 Beta",
         action: "download",
         cta: "Install v1.2.1 Beta",
@@ -1672,10 +1690,27 @@ const versionHistoryContent = {
   },
   ru: {
     title: "История версий.",
-    copy: "Текущая версия сайта и приложения: v1.2.2 Beta.",
+    copy: "Текущая версия сайта и приложения: v1.3 Beta.",
     versions: [
       {
         label: "Актуальная",
+        title: "Версия v1.3 Beta",
+        action: "download",
+        cta: "Установить v1.3 Beta",
+        items: [
+          "Добавлена настраиваемая цветовая чувствительность для Trigger Bot.",
+          "Добавлен предпросмотр цветового диапазона в реальном времени.",
+          "Добавлен Rapid Click (Экспериментальный).",
+          "Добавлены подробные встроенные подсказки для новых функций.",
+          "Улучшена настройка цветового обнаружения Trigger Bot.",
+          "Улучшены визуальные элементы Mini Status.",
+          "Переработан экран загрузки с более плавными анимациями.",
+          "Ускорен запуск за счет оптимизированной обработки изображений и кэширования.",
+          "Различные улучшения интерфейса, оптимизация производительности и повышение стабильности."
+        ]
+      },
+      {
+        label: "Предыдущая beta-версия",
         title: "Версия v1.2.2 Beta",
         action: "download",
         cta: "Установить v1.2.2 Beta",
@@ -1687,7 +1722,7 @@ const versionHistoryContent = {
         ]
       },
       {
-        label: "Предыдущая beta-версия",
+        label: "Старая beta-версия",
         title: "Версия v1.2.1 Beta",
         action: "download",
         cta: "Установить v1.2.1 Beta",
@@ -1730,10 +1765,27 @@ const versionHistoryContent = {
   },
   uk: {
     title: "Історія версій.",
-    copy: "Поточна версія сайту та застосунку: v1.2.2 Beta.",
+    copy: "Поточна версія сайту та застосунку: v1.3 Beta.",
     versions: [
       {
         label: "Актуальна",
+        title: "Версія v1.3 Beta",
+        action: "download",
+        cta: "Встановити v1.3 Beta",
+        items: [
+          "Додано налаштовувану чутливість кольору для Trigger Bot.",
+          "Додано попередній перегляд діапазону кольорів у реальному часі.",
+          "Додано Rapid Click (Експериментальний).",
+          "Додано докладні внутрішні підказки для нових функцій.",
+          "Покращено налаштування виявлення кольору Trigger Bot.",
+          "Покращено візуальні елементи Mini Status.",
+          "Перероблено екран завантаження з більш плавною анімацією.",
+          "Прискорено запуск завдяки оптимізованій обробці зображень і кешуванню.",
+          "Різні покращення інтерфейсу, оптимізація продуктивності та підвищення стабільності."
+        ]
+      },
+      {
+        label: "Попередня beta-версія",
         title: "Версія v1.2.2 Beta",
         action: "download",
         cta: "Встановити v1.2.2 Beta",
@@ -1745,7 +1797,7 @@ const versionHistoryContent = {
         ]
       },
       {
-        label: "Попередня beta-версія",
+        label: "Стара beta-версія",
         title: "Версія v1.2.1 Beta",
         action: "download",
         cta: "Встановити v1.2.1 Beta",
@@ -1792,27 +1844,34 @@ const versionsContent = {
   en: {
     kicker: "Old versions",
     title: "Available builds.",
-    copy: "Previous RapidyCore builds are available here. The latest v1.2.2 Beta is available in the main download section above.",
+    copy: "Previous RapidyCore builds are available here. The latest v1.3 Beta is available in the main download section above.",
     entries: [
       {
         badge: "Previous beta",
+        title: "Beta 1.2.2",
+        text: "Win64 compatibility update. RapidyCore has been migrated from Win32 (x86) to Win64 (x64), with installer usability improvements.",
+        href: releaseDownloads.previous,
+        button: "Download v1.2.2 Beta"
+      },
+      {
+        badge: "Older beta",
         title: "Beta 1.2.1",
         text: "Previous compatibility update. Static MSVC runtime build. Kept available for users who need the previous release.",
-        href: releaseDownloads.previous,
+        href: releaseDownloads.older,
         button: "Download v1.2.1 Beta"
       },
       {
         badge: "Older beta",
         title: "Beta 1.2",
         text: "Main v1.2 feature/stability update.",
-        href: releaseDownloads.older,
+        href: releaseDownloads.oldest,
         button: "Download v1.2 Beta"
       },
       {
         badge: "Old beta",
         title: "Beta 1.1",
         text: "Kept available for users who need the older build.",
-        href: releaseDownloads.oldest,
+        href: releaseDownloads.v11,
         button: "Download v1.1 Beta"
       }
     ]
@@ -1820,27 +1879,34 @@ const versionsContent = {
   ru: {
     kicker: "Старые версии",
     title: "Доступные сборки.",
-    copy: "Здесь доступны предыдущие сборки RapidyCore. Актуальная v1.2.2 Beta находится в основном разделе загрузки выше.",
+    copy: "Здесь доступны предыдущие сборки RapidyCore. Актуальная v1.3 Beta находится в основном разделе загрузки выше.",
     entries: [
       {
         badge: "Предыдущая beta-версия",
+        title: "Beta 1.2.2",
+        text: "Обновление совместимости Win64. RapidyCore перенесён с Win32 (x86) на Win64 (x64), а также улучшено удобство работы установщика.",
+        href: releaseDownloads.previous,
+        button: "Скачать v1.2.2 Beta"
+      },
+      {
+        badge: "Старая beta-версия",
         title: "Beta 1.2.1",
         text: "Предыдущее обновление совместимости. Сборка со статическим MSVC runtime. Оставлена доступной для пользователей, которым нужна предыдущая версия.",
-        href: releaseDownloads.previous,
+        href: releaseDownloads.older,
         button: "Скачать v1.2.1 Beta"
       },
       {
         badge: "Старая beta-версия",
         title: "Beta 1.2",
         text: "Основное обновление функций и стабильности v1.2.",
-        href: releaseDownloads.older,
+        href: releaseDownloads.oldest,
         button: "Скачать v1.2 Beta"
       },
       {
         badge: "Старая beta-версия",
         title: "Beta 1.1",
         text: "Оставлена доступной для пользователей, которым нужна старая сборка.",
-        href: releaseDownloads.oldest,
+        href: releaseDownloads.v11,
         button: "Скачать v1.1 Beta"
       }
     ]
@@ -1848,27 +1914,34 @@ const versionsContent = {
   uk: {
     kicker: "Старі версії",
     title: "Доступні збірки.",
-    copy: "Тут доступні попередні збірки RapidyCore. Актуальна v1.2.2 Beta знаходиться в основному розділі завантаження вище.",
+    copy: "Тут доступні попередні збірки RapidyCore. Актуальна v1.3 Beta знаходиться в основному розділі завантаження вище.",
     entries: [
       {
         badge: "Попередня beta-версія",
+        title: "Beta 1.2.2",
+        text: "Оновлення сумісності Win64. RapidyCore перенесено з Win32 (x86) на Win64 (x64), а також покращено зручність роботи інсталятора.",
+        href: releaseDownloads.previous,
+        button: "Завантажити v1.2.2 Beta"
+      },
+      {
+        badge: "Стара beta-версія",
         title: "Beta 1.2.1",
         text: "Попереднє оновлення сумісності. Збірка зі статичним MSVC runtime. Залишена доступною для користувачів, яким потрібна попередня версія.",
-        href: releaseDownloads.previous,
+        href: releaseDownloads.older,
         button: "Завантажити v1.2.1 Beta"
       },
       {
         badge: "Стара beta-версія",
         title: "Beta 1.2",
         text: "Основне оновлення функцій і стабільності v1.2.",
-        href: releaseDownloads.older,
+        href: releaseDownloads.oldest,
         button: "Завантажити v1.2 Beta"
       },
       {
         badge: "Стара beta-версія",
         title: "Beta 1.1",
         text: "Залишена доступною для користувачів, яким потрібна стара збірка.",
-        href: releaseDownloads.oldest,
+        href: releaseDownloads.v11,
         button: "Завантажити v1.1 Beta"
       }
     ]
@@ -1885,32 +1958,32 @@ Object.assign(translations.en.hero, {
 });
 
 Object.assign(downloadContent.en, {
-  title: "RapidyCore v1.2.2 Beta is available.",
-  button: "Install v1.2.2 Beta",
-  versionValue: "v1.2.2 Beta",
-  note: "Win64 compatibility update. RapidyCore has been migrated from Win32 (x86) to Win64 (x64), with installer usability improvements.",
-  safetyItem: "Official website download includes the current v1.2.2 Beta installer.",
-  faqAnswer: "Yes. The official Windows installer for RapidyCore v1.2.2 Beta is available in the download section.",
+  title: "RapidyCore v1.3 Beta is available.",
+  button: "Install v1.3 Beta",
+  versionValue: "v1.3 Beta",
+  note: "Major feature update. Trigger Bot has received advanced color tolerance controls, Rapid Click (Experimental), a redesigned startup experience, and numerous interface improvements.",
+  safetyItem: "Official website download includes the current v1.3 Beta installer.",
+  faqAnswer: "Yes. The official Windows installer for RapidyCore v1.3 Beta is now available in the download section.",
   oldVersionsButton: "View old versions"
 });
 
 Object.assign(downloadContent.ru, {
-  title: "RapidyCore v1.2.2 Beta доступна.",
-  button: "Установить v1.2.2 Beta",
-  versionValue: "v1.2.2 Beta",
-  note: "Обновление совместимости Win64. RapidyCore перенесён с Win32 (x86) на Win64 (x64), а также улучшено удобство работы установщика.",
-  safetyItem: "На официальном сайте доступен текущий установщик v1.2.2 Beta.",
-  faqAnswer: "Да. Официальный установщик Windows для RapidyCore v1.2.2 Beta доступен в разделе скачивания.",
+  title: "RapidyCore v1.3 Beta доступна.",
+  button: "Установить v1.3 Beta",
+  versionValue: "v1.3 Beta",
+  note: "Большое обновление функций. Trigger Bot получил расширенные настройки цветового допуска, Rapid Click (Экспериментальный), переработанный интерфейс запуска и множество улучшений интерфейса.",
+  safetyItem: "На официальном сайте доступен текущий установщик v1.3 Beta.",
+  faqAnswer: "Да. Официальный установщик Windows для RapidyCore v1.3 Beta теперь доступен в разделе скачивания.",
   oldVersionsButton: "Посмотреть старые версии"
 });
 
 Object.assign(downloadContent.uk, {
-  title: "RapidyCore v1.2.2 Beta доступна.",
-  button: "Встановити v1.2.2 Beta",
-  versionValue: "v1.2.2 Beta",
-  note: "Оновлення сумісності Win64. RapidyCore перенесено з Win32 (x86) на Win64 (x64), а також покращено зручність роботи інсталятора.",
-  safetyItem: "На офіційному сайті доступний поточний інсталятор v1.2.2 Beta.",
-  faqAnswer: "Так. Офіційний інсталятор Windows для RapidyCore v1.2.2 Beta доступний у розділі завантаження.",
+  title: "RapidyCore v1.3 Beta доступна.",
+  button: "Встановити v1.3 Beta",
+  versionValue: "v1.3 Beta",
+  note: "Велике оновлення функцій. Trigger Bot отримав розширені налаштування допуску кольору, Rapid Click (Експериментальний), перероблений інтерфейс запуску та численні покращення інтерфейсу.",
+  safetyItem: "На офіційному сайті доступний поточний інсталятор v1.3 Beta.",
+  faqAnswer: "Так. Офіційний інсталятор Windows для RapidyCore v1.3 Beta тепер доступний у розділі завантаження.",
   oldVersionsButton: "Переглянути старі версії"
 });
 
@@ -2653,23 +2726,32 @@ function renderChangelog(lang) {
   setNodeText("#changelog-copy", changelog.copy);
   list.innerHTML = "";
 
-  changelog.versions.forEach((version) => {
-    const item = document.createElement("button");
-    item.type = "button";
-    item.className = "changelog-item changelog-item-button";
-    item.addEventListener("click", () => {
-      handleVersionAction(version.action, lang);
-    });
+  changelog.versions.forEach((version, index) => {
+    const entry = document.createElement("article");
+    entry.className = "version-entry" + (index === 0 ? " is-open is-current" : "");
 
-    const tag = document.createElement("span");
-    tag.className = "changelog-tag";
-    tag.textContent = version.label;
+    const header = document.createElement("button");
+    header.type = "button";
+    header.className = "version-entry-header";
 
-    const title = document.createElement("h3");
+    const label = document.createElement("span");
+    label.className = "version-entry-label";
+    label.textContent = version.label;
+
+    const title = document.createElement("span");
     title.textContent = version.title;
 
+    const arrow = document.createElement("span");
+    arrow.className = "version-entry-arrow";
+    arrow.textContent = "\u203A";
+
+    header.append(label, title, arrow);
+
+    const body = document.createElement("div");
+    body.className = "version-entry-body";
+
     const points = document.createElement("ul");
-    points.className = "changelog-points";
+    points.className = "version-entry-points";
 
     version.items.forEach((text) => {
       const point = document.createElement("li");
@@ -2677,12 +2759,10 @@ function renderChangelog(lang) {
       points.appendChild(point);
     });
 
-    const cta = document.createElement("p");
-    cta.className = "changelog-cta";
-    cta.textContent = version.cta;
+    body.appendChild(points);
 
-    item.append(tag, title, points, cta);
-    list.appendChild(item);
+    entry.append(header, body);
+    list.appendChild(entry);
   });
 
   const note = document.createElement("article");
@@ -2704,26 +2784,115 @@ function renderChangelog(lang) {
   paragraph.appendChild(document.createTextNode(changelog.betaNoteSuffix));
   note.appendChild(paragraph);
   list.appendChild(note);
+
+  list.addEventListener("click", (e) => {
+    const header = e.target.closest(".version-entry-header");
+    if (!header) return;
+    const entry = header.closest(".version-entry");
+    if (!entry) return;
+    const body = entry.querySelector(".version-entry-body");
+    if (!body) return;
+
+    const isOpen = entry.classList.contains("is-open");
+
+    if (isOpen) {
+      body.style.maxHeight = body.scrollHeight + "px";
+      requestAnimationFrame(() => {
+        body.style.maxHeight = "0";
+        requestAnimationFrame(() => {
+          entry.classList.remove("is-open");
+        });
+      });
+    } else {
+      body.style.maxHeight = body.scrollHeight + "px";
+      entry.classList.add("is-open");
+      const complete = () => {
+        body.style.maxHeight = "";
+        body.removeEventListener("transitionend", complete);
+      };
+      body.addEventListener("transitionend", complete, { once: true });
+    }
+  });
 }
 
 function renderFaq(lang) {
-  const list = document.querySelector("#faq-list");
+  let list = document.querySelector("#faq-list");
   const entries = translations[lang].faq.items.map((entry) => ({ ...entry }));
   const download = getLocalizedContent(downloadContent, lang);
-  list.innerHTML = "";
+
+  // Replace the list element to remove all stale event listeners
+  const newList = list.cloneNode(false);
+  list.parentNode.replaceChild(newList, list);
+  list = newList;
 
   if (entries.length > 0) {
     entries[entries.length - 1].answer = download.faqAnswer;
   }
 
   entries.forEach((entry) => {
-    const item = document.createElement("details");
+    const item = document.createElement("div");
     item.className = "faq-item";
-    item.innerHTML = `
-      <summary>${entry.question}</summary>
-      <p>${entry.answer}</p>
-    `;
+
+    const header = document.createElement("button");
+    header.type = "button";
+    header.className = "faq-item-header";
+
+    const question = document.createElement("span");
+    question.textContent = entry.question;
+
+    const indicator = document.createElement("span");
+    indicator.className = "faq-item-indicator";
+    indicator.textContent = "+";
+
+    header.append(question, indicator);
+
+    const body = document.createElement("div");
+    body.className = "faq-item-body";
+
+    const p = document.createElement("p");
+    p.textContent = entry.answer;
+    body.appendChild(p);
+
+    item.append(header, body);
     list.appendChild(item);
+  });
+
+  list.addEventListener("click", (e) => {
+    const header = e.target.closest(".faq-item-header");
+    if (!header) return;
+    const item = header.closest(".faq-item");
+    if (!item) return;
+    const body = item.querySelector(".faq-item-body");
+    if (!body) return;
+
+    const isOpen = item.classList.contains("is-open");
+
+    if (isOpen) {
+      const height = body.scrollHeight;
+      body.style.maxHeight = height + "px";
+      requestAnimationFrame(() => {
+        body.style.maxHeight = "0";
+        requestAnimationFrame(() => {
+          item.classList.remove("is-open");
+        });
+      });
+    } else {
+      // Temporarily remove max-height to measure the actual content height
+      const savedTransition = body.style.transition;
+      body.style.transition = "none";
+      body.style.maxHeight = "none";
+      const height = body.scrollHeight;
+      body.style.maxHeight = "0";
+      void body.offsetHeight;
+      body.style.transition = savedTransition;
+      body.style.maxHeight = height + "px";
+      item.classList.add("is-open");
+      const complete = () => {
+        body.style.maxHeight = "";
+        body.removeEventListener("transitionend", complete);
+      };
+      body.addEventListener("transitionend", complete, { once: true });
+    }
   });
 }
 
