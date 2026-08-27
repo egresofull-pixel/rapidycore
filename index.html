@@ -1,268 +1,62 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta
-      id="meta-description"
-      name="description"
-      content="RapidyCore is a free Windows utility for Blade Ball using external screen-based color detection and normal Windows input."
-    >
-    <meta id="og-title" property="og:title" content="RapidyCore - Blade Ball Free Windows Utility">
-    <meta
-      id="og-description"
-      property="og:description"
-      content="RapidyCore is a free Windows utility for Blade Ball using external screen-based color detection and normal Windows input."
-    >
-    <meta property="og:type" content="website">
-    <meta id="twitter-title" name="twitter:title" content="RapidyCore - Blade Ball Free Windows Utility">
-    <meta
-      id="twitter-description"
-      name="twitter:description"
-      content="RapidyCore is a free Windows utility for Blade Ball using external screen-based color detection and normal Windows input."
-    >
-    <meta name="twitter:card" content="summary">
-    <title>RapidyCore - Blade Ball Free Windows Utility</title>
-    <link rel="icon" href="assets/rapidycore.ico">
-    <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
-    <a class="skip-link" href="#main" data-i18n="a11y.skip">Skip to content</a>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Solvar — a refined Windows desktop utility, created by Rapidy.">
+  <meta property="og:title" content="Solvar — Created by Rapidy">
+  <meta property="og:description" content="A controlled, refined desktop experience by RapidyCore.">
+  <meta property="og:type" content="website">
+  <title>Solvar — Created by Rapidy</title>
+  <link rel="icon" href="assets/logo5.ico">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="intro" id="intro" aria-hidden="true"><video class="intro-video" src="assets/Загрузка.mp4" autoplay muted playsinline></video><img src="assets/logo5.ico" alt=""><span>Solvar</span></div>
+  <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Solvar home"><img src="assets/logo5.ico" alt=""><span>Solvar</span></a>
+      <nav class="nav-links" aria-label="Primary navigation"><a href="#preview" data-i18n="nav.preview">Interactive Preview</a><a href="#features" data-i18n="nav.features">Features</a><a href="#access" data-i18n="nav.access">Access</a><a href="#faq">FAQ</a></nav>
+      <div class="header-actions"><button class="text-button" data-open-modal="login" data-i18n="nav.login">Log in</button><button class="button button-small" data-open-modal="register" data-i18n="nav.get">Get Solvar</button><div class="language-switcher" aria-label="Language selector"><button data-language="en" aria-label="English">EN</button><button data-language="uk" aria-label="Українська">UA</button><button data-language="ru" aria-label="Русский">RU</button></div></div>
+    </div>
+  </header>
+  <main id="main">
+    <section class="hero" id="top">
+      <video class="hero-cycle" src="assets/Цикл.mp4" autoplay muted loop playsinline aria-hidden="true"></video>
+      <img class="hero-logo-bg" src="assets/logo5.ico" alt="" aria-hidden="true">
+      <div class="ambient ambient-one"></div>
+      <div class="container hero-layout">
+        <div class="hero-copy"><p class="eyebrow" data-i18n="hero.kicker">A RAPIDYCORE PRODUCT</p><h1 data-i18n-html="hero.title">Calm control.<br><em>Sharper rhythm.</em></h1><p class="hero-lead" data-i18n="hero.lead">Solvar is a refined Windows desktop utility with focused controls, customizable visuals, and a deliberately quiet interface.</p><div class="hero-actions"><a class="button" href="#access"><span data-i18n="hero.access">Explore access</span> <b>→</b></a><a class="button button-quiet" href="#preview" data-i18n="hero.preview">Interactive preview</a></div><div class="hero-meta"><span><b data-i18n="hero.hours">12 hours</b><i data-i18n="hero.free">free to explore</i></span><span data-i18n="hero.created">Created by Rapidy</span></div></div>
+        <div class="hero-orbit" aria-hidden="true"><div class="orbit-ring"></div><div class="orbit-dot"></div><div class="hero-insignia"><img src="assets/logo5.ico" alt=""></div><p>Solvar / <span>01</span></p></div>
+      </div>
+    </section>
 
-    <header class="site-header">
-      <div class="container header-inner">
-        <a class="brand" href="#top" aria-label="RapidyCore">
-          <img src="assets/rapidycore.ico" alt="" class="brand-logo" width="36" height="36">
-          <span>RapidyCore</span>
-        </a>
-
-        <nav class="nav-links" aria-label="Primary navigation">
-          <a href="#features" data-i18n="nav.features">Features</a>
-          <a href="#preview" data-i18n="nav.preview">Preview</a>
-          <a href="#how" data-i18n="nav.how">How it works</a>
-          <a href="#setup" data-i18n="nav.setup">Setup</a>
-          <a href="#download" data-i18n="nav.download">Download</a>
-          <a href="#faq" data-i18n="nav.faq">FAQ</a>
-        </nav>
-
-        <div class="language-switcher" aria-label="Language selector">
-          <button class="lang-button is-active" type="button" data-lang="en" aria-pressed="true">EN</button>
-          <button class="lang-button" type="button" data-lang="ru" aria-pressed="false">RU</button>
-          <button class="lang-button" type="button" data-lang="uk" aria-pressed="false">UK</button>
+    <section class="section preview-section" id="preview"><div class="container">
+      <div class="section-head split"><div><p class="eyebrow" data-i18n="preview.kicker">INTERACTIVE PREVIEW</p><h2 data-i18n="preview.title">The familiar surface.</h2></div><p data-i18n="preview.copy">A compact visual preview of Solvar. Explore the interface freely—only the theme changes the presentation.</p></div>
+      <div class="demo-shell" id="demo" data-theme="blue">
+        <div class="demo-topbar"><div class="demo-title"><img src="assets/logo5.ico" alt=""><strong>Solvar</strong></div><span>Created by Rapidy</span><div class="window-actions"><i></i><i></i></div></div>
+        <div class="demo-body">
+          <nav class="demo-nav" aria-label="Solvar preview sections"><button class="demo-tab active" data-tab="spam"><span>◉</span>Spam</button><button class="demo-tab" data-tab="afk"><span>◒</span>AFK</button><button class="demo-tab" data-tab="trigger"><span>◌</span>Trigger Bot</button><button class="demo-tab" data-tab="visuals"><span>▧</span>Visuals</button></nav>
+          <div class="demo-content">
+            <section class="demo-panel active" data-panel="spam"><div class="app-page-heading"><div><h3>Spam</h3><p>Configure timed LMB spam and rapid click features</p></div></div><div class="app-card"><div class="app-card-title"><h4>Timed LMB Spam</h4><span class="app-status">Disabled</span></div><div class="app-row"><label>Toggle key</label><button class="app-input">OemPlus</button><button class="app-set">Set…</button><label class="app-toggle"><input type="checkbox"><span>Enable</span></label></div><div class="app-row"><label>Delay</label><button class="app-input">2300</button><small>μs</small><small>ms</small></div><p class="app-help">Toggle spam on/off using the configured hotkey.</p></div><div class="app-card compact-card"><div class="app-card-title"><h4>Rapid Click <em>Preview</em></h4></div><div class="app-row"><label>Hotkey</label><button class="app-input">F</button><button class="app-set">Set</button><label class="app-toggle"><input type="checkbox"><span>Enable</span></label></div><p class="app-help">Repeatedly clicks while the assigned hotkey is held.</p></div></section>
+            <section class="demo-panel" data-panel="afk"><div class="app-page-heading"><div><h3>AFK</h3><p>Configure AFK (away-from-keyboard) automation settings</p></div></div><div class="app-card tall"><div class="app-card-title"><h4>AFK Mode</h4><span class="app-status">Stopped</span></div><div class="app-row"><label class="app-toggle"><input type="checkbox"><span>Enable</span></label></div><div class="app-info"><p>Current status: <b>Stopped</b></p><p>AFK interval: <button class="app-input">9</button> minutes</p><p>Last key sent: <b>Not sent yet</b></p></div><p class="app-help">AFK mode sends a periodic Space press to prevent idle disconnection.</p></div></section>
+            <section class="demo-panel" data-panel="trigger"><div class="app-page-heading"><div><h3>Trigger Bot</h3><p>Configure color-based trigger automation</p></div></div><div class="trigger-pair"><div class="app-card mini"><div class="app-card-title"><h4>Trigger Bot #1</h4><span class="app-status">Off</span></div><label class="app-toggle"><input type="checkbox"><span>Enable</span></label><div class="app-row"><label>Activation key</label><button class="app-input">XButton1</button><button class="app-set">Set…</button></div></div><div class="app-card mini"><div class="app-card-title"><h4>Trigger Bot #2</h4><span class="app-status">Off</span></div><label class="app-toggle"><input type="checkbox"><span>Enable</span></label><div class="app-row"><label>Activation key</label><button class="app-input">XButton2</button><button class="app-set">Set…</button></div></div></div><div class="app-card detection"><h4>Detection Settings</h4><div class="app-row"><label>Target color</label><button class="app-input">#2DFF00</button><i class="color-dot"></i></div><div class="app-row"><label>Scan size</label><input type="range" value="50"><output>50 px</output></div><div class="app-row"><label>Cooldown</label><input type="range" value="35"><output>600 ms</output></div><p class="app-help">Trigger Bot reacts to the configured color in the scanned area.</p></div></section>
+            <section class="demo-panel" data-panel="visuals"><div class="app-page-heading"><div><h3>Visuals</h3><p>Customize appearance and theme</p></div></div><div class="app-card"><h4>Theme</h4><div class="theme-list" role="radiogroup" aria-label="Theme selection"><button class="theme-choice active" data-theme-choice="blue" role="radio" aria-checked="true"><i class="swatch blue"></i><span>Blue</span><small>Default</small></button><button class="theme-choice" data-theme-choice="violet" role="radio" aria-checked="false"><i class="swatch violet"></i><span>Purple</span><small>Night</small></button><button class="theme-choice" data-theme-choice="green" role="radio" aria-checked="false"><i class="swatch green"></i><span>Green</span><small>Forest</small></button></div><p class="app-help">The selected theme changes the visual presentation immediately.</p></div><div class="app-card compact-card"><h4>Logo behavior</h4><label class="app-toggle"><input type="checkbox"><span>Show logo video overlay</span></label></div></section>
+          </div>
         </div>
       </div>
-    </header>
+    </div></section>
 
-    <main id="main">
-      <section class="hero" id="top">
-        <div class="hero-backdrop" aria-hidden="true">
-          <img src="assets/logo.png" alt="" class="hero-logo">
-        </div>
-        <div class="container hero-content">
-          <p class="section-kicker" data-i18n="hero.kicker">Official RapidyCore website</p>
-          <h1 data-i18n="hero.title">RapidyCore for Blade Ball</h1>
-          <p class="hero-tagline" data-i18n="hero.tagline">
-            RapidyCore is a free Windows utility for Blade Ball using external screen-based color detection and normal Windows input.
-          </p>
-          <div class="hero-actions" aria-label="Primary actions">
-            <a class="btn btn-primary" href="#download" data-i18n="hero.download">Download</a>
-            <a class="btn btn-secondary" href="#features" data-i18n="hero.features">View features</a>
-            <a class="btn btn-ghost" href="#changelog" data-i18n="hero.changelog">Changelog</a>
-          </div>
-          <ul class="hero-points" id="hero-points" aria-label="RapidyCore highlights"></ul>
-        </div>
-      </section>
+    <section class="section features" id="features"><div class="container"><div class="section-head"><p class="eyebrow" data-i18n="features.kicker">DESIGNED FOR FOCUS</p><h2 data-i18n="features.title">Everything, without the noise.</h2></div><div class="feature-grid"><article><span>01</span><h3>Spam</h3><p data-i18n="features.spam">Set a rhythm with timed LMB spam, an activation key, and a clear active state.</p></article><article><span>02</span><h3>AFK</h3><p data-i18n="features.afk">Keep a simple interval and status view close at hand when you need it.</p></article><article><span>03</span><h3>Trigger Bot</h3><p data-i18n="features.trigger">Tune color, scan size, tolerance, and cooldown from a deliberate control surface.</p></article><article><span>04</span><h3>Visuals</h3><p data-i18n="features.visuals">Choose a theme that matches your space, with a restrained palette that stays polished.</p></article></div></div></section>
 
-      <section class="section" id="features">
-        <div class="container">
-          <div class="section-heading">
-            <p class="section-kicker" data-i18n="features.kicker">Core toolkit</p>
-            <h2 data-i18n="features.title">Configurable input control, kept local.</h2>
-            <p data-i18n="features.copy">
-              RapidyCore focuses on user-controlled Windows automation with clear settings, visual feedback, and no account requirement.
-            </p>
-          </div>
-          <div class="feature-grid" id="feature-grid"></div>
-        </div>
-      </section>
+    <section class="section guide" id="guide"><div class="container"><div class="section-head split"><div><p class="eyebrow" data-i18n="guide.kicker">TRIGGER BOT GUIDE</p><h2 data-i18n="guide.title">Match the visible signal.</h2></div><p data-i18n="guide.copy">Set the Blade Ball highlight to the same color configured in Solvar’s Trigger Bot.</p></div><div class="guide-grid"><article><span>01</span><h3 data-i18n="guide.one">Open Blade Ball settings</h3><img src="assets/guide-game-settings.png" alt="Blade Ball settings"><p data-i18n="guide.onecopy">Click the gear icon in the top-right corner of Blade Ball.</p></article><article><span>02</span><h3 data-i18n="guide.two">Open “Цвет подсветки”</h3><img src="assets/guide-highlight-setting.png" alt="Highlight color setting"><p data-i18n="guide.twocopy">Select the highlight color setting shown in the game interface.</p></article><article><span>03</span><h3 data-i18n="guide.three">Set the same color</h3><img src="assets/guide-color-picker.png" alt="Color picker"><p data-i18n="guide.threecopy">Use the same color as the target color in Solvar Trigger Bot.</p></article></div><div class="state-grid"><article class="state-active"><div><p class="eyebrow" data-i18n="guide.active">TRIGGER REACTS</p><h3 data-i18n="guide.activeTitle">The target color matches.</h3><p data-i18n="guide.activeCopy">The required visual condition is present in the scan area.</p></div><img src="assets/guide-active-example.png" alt="Active trigger example"></article><article class="state-inactive"><div><p class="eyebrow" data-i18n="guide.inactive">TRIGGER DOES NOT REACT</p><h3 data-i18n="guide.inactiveTitle">The condition is absent.</h3><p data-i18n="guide.inactiveCopy">The configured visual match is not present.</p></div><img src="assets/guide-inactive-example.png" alt="Inactive trigger example"></article></div></div></section>
 
-      <section class="section section-alt" id="preview">
-        <div class="container">
-          <div class="section-heading">
-            <p class="section-kicker" data-i18n="preview.kicker">Interface preview</p>
-            <h2 id="preview-title">Real interface snapshots.</h2>
-            <p id="preview-copy">Current screenshots from the desktop app: main control window, trigger settings, and diagnostics panel.</p>
-          </div>
-          <div class="preview-grid" id="preview-grid"></div>
-        </div>
-      </section>
-
-      <section class="section" id="how">
-        <div class="container">
-          <div class="section-heading compact">
-            <p class="section-kicker" data-i18n="how.kicker">How it works</p>
-            <h2 data-i18n="how.title">Simple setup, visible behavior.</h2>
-          </div>
-          <ol class="steps" id="steps-list"></ol>
-        </div>
-      </section>
-
-      <section class="section section-alt setup-guide" id="setup">
-        <div class="container">
-          <div class="section-heading">
-            <p class="section-kicker" data-i18n="setup.kicker">Setup Guide</p>
-            <h2 data-i18n="setup.title">Match the visible signal with RapidyCore.</h2>
-            <p data-i18n="setup.copy">
-              Configure the in-game highlight color and match it with RapidyCore's external color trigger.
-            </p>
-          </div>
-
-          <div class="guide-summary">
-            <p data-i18n="setup.summary">
-              The game shows a visible color signal, RapidyCore detects that color externally from the screen, and then uses the configured normal Windows input action.
-            </p>
-          </div>
-
-          <div class="guide-warning">
-            <p data-i18n="setup.warning">
-              Trigger Bot reacts to the configured color in the scanned screen area. Any object or effect with the same or similar color, such as swords, visual effects, UI highlights, or particles, may also be detected.
-            </p>
-          </div>
-
-          <div class="guide-steps" id="guide-steps"></div>
-
-          <div class="guide-note">
-            <p data-i18n="setup.note">
-              RapidyCore uses external screen-based color detection and normal Windows input.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section class="section safety-band" id="safety">
-        <div class="container safety-layout">
-          <div>
-            <p class="section-kicker" data-i18n="safety.kicker">Safety and transparency</p>
-            <h2 data-i18n="safety.title">Local by design, clear about what it does.</h2>
-            <p class="lead" data-i18n="safety.copy">
-              RapidyCore is designed around external screen-based detection and normal Windows input. It does not require an account, cloud backend, or hidden background services.
-            </p>
-          </div>
-          <ul class="safety-list" id="safety-list"></ul>
-        </div>
-      </section>
-
-      <section class="section download-section" id="download">
-        <div class="container download-layout">
-          <div class="download-copy">
-            <p class="section-kicker" id="download-kicker">Download</p>
-            <h2 id="download-title">RapidyCore v1.3 Beta is available.</h2>
-            <p id="download-copy">Use the official Windows installer below. Privacy and Terms stay available before you install.</p>
-            <div class="download-meta" aria-label="Release details">
-              <div class="download-stat">
-                <span id="download-version-label">Version</span>
-                <strong id="download-version-value">v1.3 Beta</strong>
-              </div>
-              <div class="download-stat">
-                <span id="download-type-label">File type</span>
-                <strong id="download-type-value">Windows installer</strong>
-              </div>
-            </div>
-            <p class="download-note" id="download-note">
-              Win64 compatibility update. RapidyCore has been migrated from Win32 (x86) to Win64 (x64), with installer usability improvements.
-            </p>
-            <div class="download-legal">
-              <a href="privacy.html" data-i18n="footer.privacy">Privacy</a>
-              <a href="terms.html" data-i18n="footer.terms">Terms</a>
-            </div>
-            <div class="download-community">
-              <a href="https://t.me/rapidycore" target="_blank" rel="noreferrer">Telegram</a>
-              <a href="https://t.me/+GZCNSRBBcKJjMDRi" target="_blank" rel="noreferrer">Chat</a>
-              <a href="https://t.me/boost/rapidycore" target="_blank" rel="noreferrer">Boost</a>
-            </div>
-          </div>
-          <div class="download-action">
-            <a class="btn btn-primary download-button" id="download-button" href="downloads/RapidyCoreInstall-1.3-Beta.exe" download>
-              Install v1.3 Beta
-            </a>
-            <a class="btn btn-secondary download-button" href="#versions" id="old-versions-button">View old versions</a>
-            <p class="download-free-note" id="download-free-note">RapidyCore is free. Donations are optional.</p>
-          </div>
-        </div>
-      </section>
-
-      <section class="section section-alt versions-section" id="versions">
-        <div class="container">
-          <div class="section-heading">
-            <p class="section-kicker" id="versions-kicker">Versions</p>
-            <h2 id="versions-title">Latest and old versions.</h2>
-            <p id="versions-copy">v1.3 Beta is the latest build. v1.2.2 Beta, v1.2.1 Beta, v1.2 Beta and v1.1 Beta remain available as older builds.</p>
-          </div>
-          <div class="version-grid" id="version-grid"></div>
-        </div>
-      </section>
-
-      <section class="section" id="changelog">
-        <div class="container">
-          <div class="section-heading">
-            <p class="section-kicker" data-i18n="changelog.kicker">Changelog</p>
-            <h2 data-i18n="changelog.title">Recent product work.</h2>
-            <p id="changelog-copy">Current website and app version: v1.3 Beta.</p>
-          </div>
-          <div class="changelog-list" id="changelog-list"></div>
-        </div>
-      </section>
-
-      <section class="section section-alt support-section" id="support">
-        <div class="container">
-          <div class="support-card">
-            <div class="support-copy">
-              <p class="section-kicker" id="support-kicker">Support development</p>
-              <h2 id="support-title">Support RapidyCore</h2>
-              <p id="support-copy">
-                RapidyCore is free. If the project helps you, you can support development with a voluntary donation. Donations help with testing, bug fixes, documentation, website updates, and future improvements.
-              </p>
-              <p class="support-note" id="support-note">Donations are optional and do not unlock extra features.</p>
-            </div>
-            <a class="btn btn-secondary support-button" id="support-button" href="https://ko-fi.com/rapidy" target="_blank" rel="noopener noreferrer">
-              Donate on Ko-fi
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <section class="section section-alt" id="faq">
-        <div class="container">
-          <div class="section-heading">
-            <p class="section-kicker" data-i18n="faq.kicker">FAQ</p>
-            <h2 data-i18n="faq.title">Common questions.</h2>
-          </div>
-          <div class="faq-list" id="faq-list"></div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="container footer-inner">
-        <div class="footer-brand">
-          <img src="assets/rapidycore.ico" alt="" class="footer-logo" width="32" height="32">
-          <div>
-            <strong>RapidyCore</strong>
-            <p data-i18n="footer.copy">Personal Windows automation with local settings and transparent controls.</p>
-          </div>
-        </div>
-        <div class="footer-links">
-          <a href="#features" data-i18n="nav.features">Features</a>
-          <a href="#setup" data-i18n="nav.setup">Setup</a>
-          <a href="#download" data-i18n="nav.download">Download</a>
-          <a href="#changelog" data-i18n="nav.changelog">Changelog</a>
-          <a href="#support" id="footer-donate-link" data-i18n="footer.donate">Donate</a>
-          <a href="privacy.html" data-i18n="footer.privacy">Privacy</a>
-          <a href="terms.html" data-i18n="footer.terms">Terms</a>
-        </div>
-      </div>
-    </footer>
-
-    <script src="app.js" defer></script>
-  </body>
-</html>
+    <section class="section trial"><div class="container trial-card"><div><p class="eyebrow" data-i18n="trial.kicker">BEGIN WITH TIME</p><h2 data-i18n="trial.title">12 hours to find your flow.</h2></div><p data-i18n="trial.copy">Your free trial starts on your first application launch or authorization—not at registration. Explore nearly all major functionality before choosing access.</p><a href="#access" class="arrow-link"><span data-i18n="trial.link">See access options</span> →</a></div></section>
+    <section class="section access" id="access"><div class="container"><div class="section-head split"><div><p class="eyebrow" data-i18n="access.kicker">ACCESS</p><h2 data-i18n="access.title">Choose your window.</h2></div><p data-i18n="access.copy">Flexible passes for the time you need. Access begins after your trial.</p></div><div class="plan-grid"><article class="plan"><p data-i18n="plans.quick">QUICK PASS</p><h3 data-i18n="plans.24">24 hours</h3><strong>$3</strong><button class="plan-link" data-open-modal="register"><span data-i18n="plans.get">Get access</span> →</button></article><article class="plan"><p data-i18n="plans.weekend">WEEKEND PASS</p><h3 data-i18n="plans.3">3 days</h3><strong>$6</strong><button class="plan-link" data-open-modal="register"><span data-i18n="plans.get">Get access</span> →</button></article><article class="plan featured"><p data-i18n="plans.weekly">WEEKLY PASS</p><h3 data-i18n="plans.7">7 days</h3><strong>$10–12</strong><button class="plan-link" data-open-modal="register"><span data-i18n="plans.get">Get access</span> →</button></article><article class="plan"><p data-i18n="plans.premium">PREMIUM PASS</p><h3 data-i18n="plans.30">30 days</h3><strong>$20–25</strong><button class="plan-link" data-open-modal="register"><span data-i18n="plans.get">Get access</span> →</button></article></div><div class="permanent"><img src="assets/logo5.ico" alt=""><div><p class="eyebrow" data-i18n="permanent.kicker">PERMANENT STATUS</p><h3 data-i18n="permanent.title">Granted, never sold.</h3><p data-i18n="permanent.copy">Admin, Tester, and Content Creator access is manually granted by the owner. These special statuses are permanent and separate from subscriptions.</p></div></div></div></section>
+    <section class="section faq" id="faq"><div class="container"><div class="section-head"><p class="eyebrow">FAQ</p><h2 data-i18n="faq.title">A few clear answers.</h2></div><div class="faq-list"><details><summary data-i18n-html="faq.q1">When does the trial start?<span>+</span></summary><p data-i18n="faq.a1">The 12-hour trial begins with first application launch or authorization, not when you register.</p></details><details><summary data-i18n-html="faq.q2">Can I create an account now?<span>+</span></summary><p data-i18n="faq.a2">The account interface is ready for upcoming integration. It does not create or store credentials yet.</p></details><details><summary data-i18n-html="faq.q3">Is the preview a real app?<span>+</span></summary><p data-i18n="faq.a3">No. It is a safe visual showcase. It has no Windows integration, automation, or connection to the desktop product.</p></details><details><summary data-i18n-html="faq.q4">Can permanent access be purchased?<span>+</span></summary><p data-i18n="faq.a4">No. Permanent statuses are individually granted and are not part of the subscription plans.</p></details></div></div></section>
+  </main>
+  <footer class="site-footer"><div class="container footer-inner"><div><a class="brand" href="#top"><img src="assets/logo5.ico" alt=""><span>Solvar</span></a><p><span data-i18n="footer.created">Created by Rapidy</span><br><span data-i18n="footer.brand">A RapidyCore product</span></p></div><div class="footer-links"><a href="#preview" data-i18n="nav.preview">Interactive Preview</a><a href="#access" data-i18n="nav.access">Access</a><a href="privacy.html" data-i18n="footer.privacy">Privacy</a><a href="terms.html" data-i18n="footer.terms">Terms</a></div></div></footer>
+  <div class="modal-layer" id="modal-layer" hidden><div class="modal-backdrop" data-close-modal></div><section class="auth-modal" role="dialog" aria-modal="true" aria-labelledby="auth-title"><button class="modal-close" data-close-modal aria-label="Close">×</button><p class="eyebrow" id="auth-kicker">WELCOME BACK</p><h2 id="auth-title">Sign in to Solvar.</h2><p class="modal-copy" id="auth-copy">The account experience is being prepared for launch.</p><form id="auth-form" novalidate><div class="form-field username-field" hidden><label for="username" data-i18n="auth.username">Username</label><input id="username" autocomplete="username" placeholder="Your name"></div><div class="form-field"><label for="email" data-i18n="auth.email">Email</label><input id="email" type="email" autocomplete="email" placeholder="you@example.com"></div><div class="form-field"><label for="password" data-i18n="auth.password">Password</label><input id="password" type="password" autocomplete="current-password" placeholder="••••••••"></div><div class="form-field confirm-field" hidden><label for="confirm-password" data-i18n="auth.confirm">Confirm password</label><input id="confirm-password" type="password" autocomplete="new-password" placeholder="••••••••"></div><div class="form-row"><a href="#" class="forgot" data-i18n="auth.forgot">Forgot password?</a><button class="button" type="submit" id="auth-submit">Sign in →</button></div></form><p class="auth-switch"><span id="auth-switch-label">New to Solvar?</span> <button data-auth-view="register">Create an account</button></p><p class="form-message" id="form-message" aria-live="polite"></p></section></div>
+  <script src="app.js" defer></script>
+</body></html>
