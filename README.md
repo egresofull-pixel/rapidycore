@@ -1,22 +1,20 @@
-# Solvar website
+# RapidyCore public website
 
-Official static website for **Solvar**, created by Rapidy and presented as a RapidyCore product.
+Static public website for **RapidyCore**, the organization behind its software products and supporting systems.
 
 ## Structure
 
-- `index.html` — public product website, interactive visual preview, and future-ready auth dialogs
-- `styles.css` — responsive visual system
-- `app.js` — preview navigation, theme switching, and dialog behavior
-- `privacy.html` / `terms.html` — current legal pages
-- `assets/Загрузка.mp4` — Solvar loading animation used on entry
-- `assets/Цикл.mp4` — retained Solvar visual-cycle asset
+- `index.html` — RapidyCore home, organization overview, product hierarchy, support and future-account placeholder
+- `solvar.html` — dedicated Solvar product presentation under RapidyCore → Roblox → Blade Ball
+- `privacy.html` / `terms.html` — legal pages with the shared RapidyCore layout
+- `styles.css` — responsive visual system, motion preferences, and mobile navigation styles
+- `app.js` — mobile navigation, restrained section reveals, sticky-header state, and footer year
+- `assets/` — existing Solvar logo, product visual, and Blade Ball guide images
 
-The preview is presentation-only: it does not provide desktop automation, Windows integration, executable communication, or account storage. The only applied preview control is its visual theme.
+The site is static: it has no authentication, account storage, API calls, or backend configuration.
 
 ## Local preview
 
-```powershell
-python -m http.server 4173 --bind 127.0.0.1
-```
+    python -m http.server 4173 --bind 127.0.0.1
 
 Open `http://127.0.0.1:4173`.

@@ -1,61 +1,251 @@
 (() => {
-  const strings = {
-    en: {
-      skip:"Skip to content", "nav.preview":"Interactive Preview","nav.features":"Features","nav.access":"Access","nav.login":"Log in","nav.get":"Get Solvar",
-      "hero.kicker":"A RAPIDYCORE PRODUCT","hero.title":"Calm control.<br><em>Sharper rhythm.</em>","hero.lead":"Solvar is a refined Windows desktop utility with focused controls, customizable visuals, and a deliberately quiet interface.","hero.access":"Explore access","hero.preview":"Interactive preview","hero.hours":"12 hours","hero.free":"free to explore","hero.created":"Created by Rapidy",
-      "preview.kicker":"INTERACTIVE PREVIEW","preview.title":"The familiar surface.","preview.copy":"A compact visual preview of Solvar. Explore the interface freely—only the theme changes the presentation.",
-      "features.kicker":"DESIGNED FOR FOCUS","features.title":"Everything, without the noise.","features.spam":"Set a rhythm with timed LMB spam, an activation key, and a clear active state.","features.afk":"Keep a simple interval and status view close at hand when you need it.","features.trigger":"Tune color, scan size, tolerance, and cooldown from a deliberate control surface.","features.visuals":"Choose a theme that matches your space, with a restrained palette that stays polished.",
-      "guide.kicker":"TRIGGER BOT GUIDE","guide.title":"Match the visible signal.","guide.copy":"Set the Blade Ball highlight to the same color configured in Solvar’s Trigger Bot.","guide.one":"Open Blade Ball settings","guide.onecopy":"Click the gear icon in the top-right corner of Blade Ball.","guide.two":"Open “Цвет подсветки”","guide.twocopy":"Select the highlight color setting shown in the game interface.","guide.three":"Set the same color","guide.threecopy":"Use the same color as the target color in Solvar Trigger Bot.","guide.active":"TRIGGER REACTS","guide.activeTitle":"The target color matches.","guide.activeCopy":"The required visual condition is present in the scan area.","guide.inactive":"TRIGGER DOES NOT REACT","guide.inactiveTitle":"The condition is absent.","guide.inactiveCopy":"The configured visual match is not present.",
-      "trial.kicker":"BEGIN WITH TIME","trial.title":"12 hours to find your flow.","trial.copy":"Your free trial starts on your first application launch or authorization—not at registration. Explore nearly all major functionality before choosing access.","trial.link":"See access options",
-      "access.kicker":"ACCESS","access.title":"Choose your window.","access.copy":"Flexible passes for the time you need. Access begins after your trial.","plans.quick":"QUICK PASS","plans.weekend":"WEEKEND PASS","plans.weekly":"WEEKLY PASS","plans.premium":"PREMIUM PASS","plans.24":"24 hours","plans.3":"3 days","plans.7":"7 days","plans.30":"30 days","plans.get":"Get access",
-      "permanent.kicker":"PERMANENT STATUS","permanent.title":"Granted, never sold.","permanent.copy":"Admin, Tester, and Content Creator access is manually granted by the owner. These special statuses are permanent and separate from subscriptions.",
-      "faq.title":"A few clear answers.","faq.q1":"When does the trial start?<span>+</span>","faq.a1":"The 12-hour trial begins with first application launch or authorization, not when you register.","faq.q2":"Can I create an account now?<span>+</span>","faq.a2":"The account interface is ready for upcoming integration. It does not create or store credentials yet.","faq.q3":"Is the preview a real app?<span>+</span>","faq.a3":"No. It is a safe visual showcase. It has no Windows integration, automation, or connection to the desktop product.","faq.q4":"Can permanent access be purchased?<span>+</span>","faq.a4":"No. Permanent statuses are individually granted and are not part of the subscription plans.","footer.created":"Created by Rapidy","footer.brand":"A RapidyCore product","footer.privacy":"Privacy","footer.terms":"Terms",
-      "auth.username":"Username","auth.email":"Email","auth.password":"Password","auth.confirm":"Confirm password","auth.forgot":"Forgot password?","auth.loginKicker":"WELCOME BACK","auth.loginTitle":"Sign in to Solvar.","auth.loginCopy":"The account experience is being prepared for launch.","auth.loginSubmit":"Sign in →","auth.loginSwitch":"New to Solvar?","auth.loginAction":"Create an account","auth.registerKicker":"NEW TO SOLVAR","auth.registerTitle":"Create your Solvar account.","auth.registerCopy":"Your account UI is ready for future integration. No credentials are stored yet.","auth.registerSubmit":"Create account →","auth.registerSwitch":"Already have an account?","auth.registerAction":"Sign in","auth.loginMessage":"Sign-in is not connected yet. This interface is ready for launch integration.","auth.registerMessage":"Account creation is not connected yet. This interface is ready for launch integration."
-    },
-    uk: {
-      skip:"Перейти до вмісту","nav.preview":"Інтерактивний огляд","nav.features":"Функції","nav.access":"Доступ","nav.login":"Увійти","nav.get":"Отримати Solvar",
-      "hero.kicker":"ПРОДУКТ RAPIDYCORE","hero.title":"Спокійний контроль.<br><em>Точніший ритм.</em>","hero.lead":"Solvar — вишукана утиліта для Windows із зосередженими елементами керування, налаштуванням візуального стилю та навмисно стриманим інтерфейсом.","hero.access":"Переглянути доступ","hero.preview":"Інтерактивний огляд","hero.hours":"12 годин","hero.free":"для знайомства","hero.created":"Створено Rapidy",
-      "preview.kicker":"ІНТЕРАКТИВНИЙ ОГЛЯД","preview.title":"Знайома поверхня.","preview.copy":"Компактний візуальний огляд Solvar. Вільно досліджуйте інтерфейс — лише тема змінює презентацію.",
-      "features.kicker":"СТВОРЕНО ДЛЯ ФОКУСУ","features.title":"Усе потрібне — без зайвого.","features.spam":"Налаштуйте ритм за допомогою Timed LMB Spam, клавіші активації та зрозумілого активного стану.","features.afk":"Тримайте поруч простий перегляд інтервалу та статусу, коли це потрібно.","features.trigger":"Налаштовуйте колір, розмір сканування, допуск і затримку в продуманому просторі керування.","features.visuals":"Оберіть тему для свого простору — зі стриманою, довершеною палітрою.",
-      "guide.kicker":"ПОСІБНИК TRIGGER BOT","guide.title":"Зіставте видимий сигнал.","guide.copy":"Установіть у Blade Ball той самий колір підсвітки, який задано в Trigger Bot Solvar.","guide.one":"Відкрийте налаштування Blade Ball","guide.onecopy":"Натисніть значок шестерні у верхньому правому куті Blade Ball.","guide.two":"Відкрийте «Цвет подсветки»","guide.twocopy":"Виберіть налаштування кольору підсвітки, показане в інтерфейсі гри.","guide.three":"Установіть той самий колір","guide.threecopy":"Використайте колір, заданий як цільовий у Trigger Bot Solvar.","guide.active":"TRIGGER СПРАЦЬОВУЄ","guide.activeTitle":"Цільовий колір збігається.","guide.activeCopy":"Потрібна візуальна умова є в області сканування.","guide.inactive":"TRIGGER НЕ СПРАЦЬОВУЄ","guide.inactiveTitle":"Умова відсутня.","guide.inactiveCopy":"Налаштованого візуального збігу немає.",
-      "trial.kicker":"ПОЧНІТЬ ІЗ ЧАСУ","trial.title":"12 годин, щоб знайти свій ритм.","trial.copy":"Безкоштовна пробна версія починається з першого запуску або авторизації, а не з реєстрації. Ознайомтеся майже з усіма головними функціями перед вибором доступу.","trial.link":"Переглянути варіанти доступу",
-      "access.kicker":"ДОСТУП","access.title":"Оберіть свій період.","access.copy":"Гнучкі пропуски на потрібний вам час. Доступ починається після пробного періоду.","plans.quick":"ШВИДКИЙ ПРОПУСК","plans.weekend":"ПРОПУСК НА ВИХІДНІ","plans.weekly":"ТИЖНЕВИЙ ПРОПУСК","plans.premium":"ПРЕМІУМ-ПРОПУСК","plans.24":"24 години","plans.3":"3 дні","plans.7":"7 днів","plans.30":"30 днів","plans.get":"Отримати доступ",
-      "permanent.kicker":"ПОСТІЙНИЙ СТАТУС","permanent.title":"Надається, не продається.","permanent.copy":"Доступ Admin, Tester і Content Creator надається власником вручну. Ці особливі статуси постійні й відокремлені від підписок.",
-      "faq.title":"Кілька чітких відповідей.","faq.q1":"Коли починається пробний період?<span>+</span>","faq.a1":"12-годинний пробний період починається з першого запуску або авторизації, а не з реєстрації.","faq.q2":"Чи можна створити обліковий запис зараз?<span>+</span>","faq.a2":"Інтерфейс облікового запису готовий до майбутньої інтеграції. Він поки не створює та не зберігає дані.","faq.q3":"Огляд — це справжня програма?<span>+</span>","faq.a3":"Ні. Це безпечна візуальна демонстрація без інтеграції з Windows, автоматизації чи зв’язку з настільним продуктом.","faq.q4":"Чи можна купити постійний доступ?<span>+</span>","faq.a4":"Ні. Постійні статуси надаються індивідуально та не є частиною планів підписки.","footer.created":"Створено Rapidy","footer.brand":"Продукт RapidyCore","footer.privacy":"Конфіденційність","footer.terms":"Умови",
-      "auth.username":"Ім’я користувача","auth.email":"Ел. пошта","auth.password":"Пароль","auth.confirm":"Підтвердьте пароль","auth.forgot":"Забули пароль?","auth.loginKicker":"РАДІ ЗНОВУ БАЧИТИ","auth.loginTitle":"Увійдіть до Solvar.","auth.loginCopy":"Досвід облікового запису готується до запуску.","auth.loginSubmit":"Увійти →","auth.loginSwitch":"Нові в Solvar?","auth.loginAction":"Створити обліковий запис","auth.registerKicker":"НОВІ В SOLVAR","auth.registerTitle":"Створіть обліковий запис Solvar.","auth.registerCopy":"Інтерфейс облікового запису готовий до майбутньої інтеграції. Дані не зберігаються.","auth.registerSubmit":"Створити обліковий запис →","auth.registerSwitch":"Вже маєте обліковий запис?","auth.registerAction":"Увійти","auth.loginMessage":"Вхід ще не підключено. Цей інтерфейс готовий до інтеграції.","auth.registerMessage":"Створення облікового запису ще не підключено. Цей інтерфейс готовий до інтеграції."
-    },
-    ru: {
-      skip:"Перейти к содержимому","nav.preview":"Интерактивный обзор","nav.features":"Функции","nav.access":"Доступ","nav.login":"Войти","nav.get":"Получить Solvar",
-      "hero.kicker":"ПРОДУКТ RAPIDYCORE","hero.title":"Спокойный контроль.<br><em>Точный ритм.</em>","hero.lead":"Solvar — продуманная утилита для Windows с собранными элементами управления, настройкой визуального стиля и намеренно спокойным интерфейсом.","hero.access":"Посмотреть доступ","hero.preview":"Интерактивный обзор","hero.hours":"12 часов","hero.free":"для знакомства","hero.created":"Создано Rapidy",
-      "preview.kicker":"ИНТЕРАКТИВНЫЙ ОБЗОР","preview.title":"Знакомая поверхность.","preview.copy":"Компактный визуальный обзор Solvar. Свободно изучайте интерфейс — только тема меняет презентацию.",
-      "features.kicker":"СОЗДАНО ДЛЯ ФОКУСА","features.title":"Всё нужное — без шума.","features.spam":"Настройте ритм с Timed LMB Spam, клавишей активации и понятным активным состоянием.","features.afk":"Держите рядом простой просмотр интервала и статуса, когда это нужно.","features.trigger":"Настраивайте цвет, размер сканирования, допуск и задержку в продуманном пространстве управления.","features.visuals":"Выберите тему для своего пространства — со сдержанной, цельной палитрой.",
-      "guide.kicker":"РУКОВОДСТВО TRIGGER BOT","guide.title":"Сопоставьте видимый сигнал.","guide.copy":"Установите в Blade Ball тот же цвет подсветки, который задан в Trigger Bot Solvar.","guide.one":"Откройте настройки Blade Ball","guide.onecopy":"Нажмите значок шестерёнки в правом верхнем углу Blade Ball.","guide.two":"Откройте «Цвет подсветки»","guide.twocopy":"Выберите настройку цвета подсветки, показанную в интерфейсе игры.","guide.three":"Установите тот же цвет","guide.threecopy":"Используйте цвет, заданный как целевой в Trigger Bot Solvar.","guide.active":"TRIGGER СРАБАТЫВАЕТ","guide.activeTitle":"Целевой цвет совпадает.","guide.activeCopy":"Нужное визуальное условие есть в области сканирования.","guide.inactive":"TRIGGER НЕ СРАБАТЫВАЕТ","guide.inactiveTitle":"Условие отсутствует.","guide.inactiveCopy":"Настроенное визуальное совпадение отсутствует.",
-      "trial.kicker":"НАЧНИТЕ СО ВРЕМЕНИ","trial.title":"12 часов, чтобы найти свой ритм.","trial.copy":"Бесплатный пробный период начинается с первого запуска или авторизации, а не с регистрации. Изучите почти все основные функции до выбора доступа.","trial.link":"Посмотреть варианты доступа",
-      "access.kicker":"ДОСТУП","access.title":"Выберите свой период.","access.copy":"Гибкие пропуски на нужное вам время. Доступ начинается после пробного периода.","plans.quick":"БЫСТРЫЙ ПРОПУСК","plans.weekend":"ПРОПУСК НА ВЫХОДНЫЕ","plans.weekly":"НЕДЕЛЬНЫЙ ПРОПУСК","plans.premium":"ПРЕМИУМ-ПРОПУСК","plans.24":"24 часа","plans.3":"3 дня","plans.7":"7 дней","plans.30":"30 дней","plans.get":"Получить доступ",
-      "permanent.kicker":"ПОСТОЯННЫЙ СТАТУС","permanent.title":"Выдаётся, не продаётся.","permanent.copy":"Доступ Admin, Tester и Content Creator выдаётся владельцем вручную. Эти особые статусы постоянны и отделены от подписок.",
-      "faq.title":"Несколько ясных ответов.","faq.q1":"Когда начинается пробный период?<span>+</span>","faq.a1":"12-часовой пробный период начинается с первого запуска или авторизации, а не с регистрации.","faq.q2":"Можно ли создать аккаунт сейчас?<span>+</span>","faq.a2":"Интерфейс аккаунта готов к будущей интеграции. Он пока не создаёт и не хранит учётные данные.","faq.q3":"Обзор — это настоящая программа?<span>+</span>","faq.a3":"Нет. Это безопасная визуальная демонстрация без интеграции с Windows, автоматизации или связи с настольным продуктом.","faq.q4":"Можно ли купить постоянный доступ?<span>+</span>","faq.a4":"Нет. Постоянные статусы выдаются индивидуально и не входят в планы подписки.","footer.created":"Создано Rapidy","footer.brand":"Продукт RapidyCore","footer.privacy":"Конфиденциальность","footer.terms":"Условия",
-      "auth.username":"Имя пользователя","auth.email":"Эл. почта","auth.password":"Пароль","auth.confirm":"Подтвердите пароль","auth.forgot":"Забыли пароль?","auth.loginKicker":"С ВОЗВРАЩЕНИЕМ","auth.loginTitle":"Войдите в Solvar.","auth.loginCopy":"Опыт аккаунта готовится к запуску.","auth.loginSubmit":"Войти →","auth.loginSwitch":"Впервые в Solvar?","auth.loginAction":"Создать аккаунт","auth.registerKicker":"ВПЕРВЫЕ В SOLVAR","auth.registerTitle":"Создайте аккаунт Solvar.","auth.registerCopy":"Интерфейс аккаунта готов к будущей интеграции. Данные не хранятся.","auth.registerSubmit":"Создать аккаунт →","auth.registerSwitch":"Уже есть аккаунт?","auth.registerAction":"Войти","auth.loginMessage":"Вход пока не подключён. Этот интерфейс готов к интеграции.","auth.registerMessage":"Создание аккаунта пока не подключено. Этот интерфейс готов к интеграции."
-    }
+  const root = document.documentElement;
+  const header = document.querySelector("[data-site-header]");
+  const menuToggle = document.querySelector("[data-menu-toggle]");
+  const navigation = document.querySelector("[data-site-navigation]");
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  root.classList.add("js");
+
+  const updateHeader = () => {
+    header?.classList.toggle("is-scrolled", window.scrollY > 8);
   };
-  const intro=document.querySelector("#intro"), motion=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  window.setTimeout(()=>intro?.classList.add("done"),motion?0:850);
-  let language=localStorage.getItem("solvar-language")||"en";
-  function t(key){return strings[language][key]||strings.en[key]||key}
-  function renderLanguage(next){
-    language=next; document.documentElement.lang=next;
-    document.querySelectorAll("[data-i18n]").forEach(el=>el.textContent=t(el.dataset.i18n));
-    document.querySelectorAll("[data-i18n-html]").forEach(el=>el.innerHTML=t(el.dataset.i18nHtml));
-    document.querySelectorAll("[data-language]").forEach(el=>el.classList.toggle("active",el.dataset.language===language));
-    setAuthView(view); localStorage.setItem("solvar-language",language);
+
+  updateHeader();
+  window.addEventListener("scroll", updateHeader, { passive: true });
+
+  const closeNavigation = () => {
+    header?.classList.remove("navigation-open");
+    menuToggle?.setAttribute("aria-expanded", "false");
+  };
+
+  menuToggle?.addEventListener("click", () => {
+    const open = header?.classList.toggle("navigation-open");
+    menuToggle.setAttribute("aria-expanded", String(Boolean(open)));
+  });
+
+  navigation?.addEventListener("click", event => {
+    if (event.target.closest("a")) closeNavigation();
+  });
+
+  document.addEventListener("keydown", event => {
+    if (event.key === "Escape") closeNavigation();
+  });
+
+  const revealElements = [...document.querySelectorAll(".reveal")];
+  if (reducedMotion || !("IntersectionObserver" in window)) {
+    revealElements.forEach(element => element.classList.add("is-visible"));
+  } else {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("is-visible");
+        observer.unobserve(entry.target);
+      });
+    }, { threshold: .12, rootMargin: "0px 0px -22px" });
+
+    revealElements.forEach(element => observer.observe(element));
   }
-  document.querySelectorAll("[data-language]").forEach(button=>button.addEventListener("click",()=>renderLanguage(button.dataset.language)));
-  const demo=document.querySelector("#demo"),tabs=[...document.querySelectorAll(".demo-tab")],panels=[...document.querySelectorAll(".demo-panel")];
-  tabs.forEach(tab=>tab.addEventListener("click",()=>{tabs.forEach(item=>item.classList.toggle("active",item===tab));panels.forEach(panel=>panel.classList.toggle("active",panel.dataset.panel===tab.dataset.tab))}));
-  document.querySelectorAll("[data-theme-choice]").forEach(choice=>choice.addEventListener("click",()=>{demo.dataset.theme=choice.dataset.themeChoice;document.querySelectorAll("[data-theme-choice]").forEach(item=>{const selected=item===choice;item.classList.toggle("active",selected);item.setAttribute("aria-checked",String(selected))})}));
-  document.querySelectorAll("#demo input[type='range']").forEach(range=>range.addEventListener("input",()=>{const output=range.parentElement.querySelector("output");if(output){const unit=output.textContent.includes("px")?"px":"ms";output.textContent=`${range.value} ${unit}`}}));
-  const modal=document.querySelector("#modal-layer"),title=document.querySelector("#auth-title"),kicker=document.querySelector("#auth-kicker"),copy=document.querySelector("#auth-copy"),submit=document.querySelector("#auth-submit"),switchLabel=document.querySelector("#auth-switch-label"),switchButton=document.querySelector("[data-auth-view]"),username=document.querySelector(".username-field"),confirm=document.querySelector(".confirm-field"),forgot=document.querySelector(".forgot"),form=document.querySelector("#auth-form"),message=document.querySelector("#form-message"); let view="login";
-  function setAuthView(next){view=next;const register=next==="register";kicker.textContent=t(register?"auth.registerKicker":"auth.loginKicker");title.textContent=t(register?"auth.registerTitle":"auth.loginTitle");copy.textContent=t(register?"auth.registerCopy":"auth.loginCopy");submit.textContent=t(register?"auth.registerSubmit":"auth.loginSubmit");switchLabel.textContent=t(register?"auth.registerSwitch":"auth.loginSwitch");switchButton.textContent=t(register?"auth.registerAction":"auth.loginAction");switchButton.dataset.authView=register?"login":"register";username.hidden=!register;confirm.hidden=!register;forgot.hidden=register;message.textContent=""}
-  function openModal(next="login"){setAuthView(next);modal.hidden=false;document.body.style.overflow="hidden";setTimeout(()=>modal.querySelector("input")?.focus(),20)}function closeModal(){modal.hidden=true;document.body.style.overflow=""}
-  document.querySelectorAll("[data-open-modal]").forEach(button=>button.addEventListener("click",()=>openModal(button.dataset.openModal)));document.querySelectorAll("[data-close-modal]").forEach(button=>button.addEventListener("click",closeModal));switchButton.addEventListener("click",()=>setAuthView(switchButton.dataset.authView));document.addEventListener("keydown",event=>{if(event.key==="Escape"&&!modal.hidden)closeModal()});form.addEventListener("submit",event=>{event.preventDefault();message.textContent=t(view==="register"?"auth.registerMessage":"auth.loginMessage")});
-  renderLanguage(language);
+
+  document.querySelectorAll("[data-current-year]").forEach(element => {
+    element.textContent = String(new Date().getFullYear());
+  });
+
+  document.querySelectorAll("[data-product-demo]").forEach(demo => {
+    const tabs = [...demo.querySelectorAll("[data-demo-tab]")];
+    const panels = [...demo.querySelectorAll("[data-demo-panel]")];
+    const themeChoices = [...demo.querySelectorAll("[data-demo-theme]")];
+
+    const activateTab = tab => {
+      const selected = tab.dataset.demoTab;
+      tabs.forEach(item => {
+        const active = item === tab;
+        item.classList.toggle("is-active", active);
+        item.setAttribute("aria-selected", String(active));
+        item.tabIndex = active ? 0 : -1;
+      });
+      panels.forEach(panel => {
+        const active = panel.dataset.demoPanel === selected;
+        panel.classList.toggle("is-active", active);
+        panel.hidden = !active;
+      });
+    };
+
+    tabs.forEach((tab, index) => {
+      tab.addEventListener("click", () => activateTab(tab));
+      tab.addEventListener("keydown", event => {
+        if (!["ArrowRight", "ArrowLeft", "Home", "End"].includes(event.key)) return;
+        event.preventDefault();
+        const nextIndex = event.key === "Home" ? 0 : event.key === "End" ? tabs.length - 1 : (index + (event.key === "ArrowRight" ? 1 : -1) + tabs.length) % tabs.length;
+        tabs[nextIndex].focus();
+        activateTab(tabs[nextIndex]);
+      });
+    });
+
+    themeChoices.forEach(choice => {
+      choice.addEventListener("click", () => {
+        demo.dataset.theme = choice.dataset.demoTheme;
+        themeChoices.forEach(item => {
+          const active = item === choice;
+          item.classList.toggle("is-active", active);
+          item.setAttribute("aria-checked", String(active));
+        });
+      });
+    });
+  });
+
+  const authModal = document.querySelector("[data-auth-modal]");
+  const authForm = authModal?.querySelector("[data-auth-form]");
+  const authEmail = authModal?.querySelector("#auth-email");
+  const authPassword = authModal?.querySelector("#auth-password");
+  const authConfirmPassword = authModal?.querySelector("#auth-confirm-password");
+  const authRegisterField = authModal?.querySelector("[data-auth-register-field]");
+  const authForgot = authModal?.querySelector("[data-auth-forgot]");
+  const authSwitch = authModal?.querySelector("[data-auth-switch]");
+  const authKicker = authModal?.querySelector("#auth-kicker");
+  const authTitle = authModal?.querySelector("#auth-title");
+  const authCopy = authModal?.querySelector("#auth-copy");
+  const authContext = authModal?.querySelector("#auth-context");
+  const authSubmit = authModal?.querySelector("#auth-submit");
+  const authSwitchCopy = authModal?.querySelector("#auth-switch-copy");
+  const authMessage = authModal?.querySelector("#auth-message");
+  let authMode = "login";
+  let authTrigger = null;
+  let closeTimer;
+
+  const setAuthMessage = (message = "", prepared = false) => {
+    if (!authMessage) return;
+    authMessage.textContent = message;
+    authMessage.classList.toggle("is-prepared", prepared);
+  };
+
+  const setInputValidity = (input, invalid) => {
+    if (!input) return;
+    input.setAttribute("aria-invalid", String(invalid));
+  };
+
+  const setAuthMode = mode => {
+    authMode = mode;
+    const registering = mode === "register";
+    authModal?.classList.toggle("is-registering", registering);
+    if (authRegisterField) authRegisterField.hidden = !registering;
+    if (authForgot) authForgot.hidden = registering;
+    if (authConfirmPassword) {
+      authConfirmPassword.required = registering;
+      authConfirmPassword.autocomplete = registering ? "new-password" : "off";
+    }
+    if (authPassword) authPassword.autocomplete = registering ? "new-password" : "current-password";
+    if (authKicker) authKicker.textContent = registering ? "NEW TO SOLVAR" : "WELCOME BACK";
+    if (authTitle) authTitle.textContent = registering ? "Create a Solvar account." : "Sign in to Solvar.";
+    if (authCopy) authCopy.textContent = registering ? "Registration is prepared for future account integration." : "Account access is being prepared for future integration.";
+    if (authSubmit) authSubmit.innerHTML = registering ? "Create account <b>→</b>" : "Sign in <b>→</b>";
+    if (authSwitchCopy) authSwitchCopy.textContent = registering ? "Already have an account?" : "New to Solvar?";
+    if (authSwitch) {
+      authSwitch.dataset.authSwitch = registering ? "login" : "register";
+      authSwitch.textContent = registering ? "Sign in" : "Create an account";
+    }
+    [authEmail, authPassword, authConfirmPassword].forEach(input => setInputValidity(input, false));
+    setAuthMessage();
+  };
+
+  const modalFocusableElements = () => [...authModal?.querySelectorAll("button:not([hidden]), input:not([hidden]), [href]:not([hidden])") || []]
+    .filter(element => !element.disabled && element.offsetParent !== null);
+
+  const openAuthModal = ({ plan = "", trigger = null } = {}) => {
+    if (!authModal) return;
+    window.clearTimeout(closeTimer);
+    authTrigger = trigger || document.activeElement;
+    authForm?.reset();
+    setAuthMode("login");
+    if (authContext) {
+      authContext.hidden = !plan;
+      authContext.textContent = plan ? "Continue with " + plan + " once account access is connected." : "";
+    }
+    authModal.hidden = false;
+    document.body.classList.add("modal-open");
+    window.requestAnimationFrame(() => {
+      authModal.classList.add("is-open");
+      window.setTimeout(() => authEmail?.focus({ preventScroll: true }), reducedMotion ? 0 : 24);
+    });
+  };
+
+  const closeAuthModal = () => {
+    if (!authModal || authModal.hidden) return;
+    authModal.classList.remove("is-open");
+    document.body.classList.remove("modal-open");
+    closeTimer = window.setTimeout(() => {
+      authModal.hidden = true;
+      if (authContext) authContext.hidden = true;
+      if (authTrigger instanceof HTMLElement && document.contains(authTrigger)) authTrigger.focus();
+      authTrigger = null;
+    }, reducedMotion ? 0 : 270);
+  };
+
+  authModal?.querySelectorAll("[data-auth-close]").forEach(control => control.addEventListener("click", closeAuthModal));
+  authSwitch?.addEventListener("click", () => {
+    setAuthMode(authSwitch.dataset.authSwitch || "login");
+    authEmail?.focus();
+  });
+  authForgot?.addEventListener("click", () => {
+    setAuthMessage("Password recovery will be available with account integration.", true);
+  });
+  authForm?.addEventListener("submit", event => {
+    event.preventDefault();
+    const emailIsValid = Boolean(authEmail?.value.trim()) && Boolean(authEmail?.validity.valid);
+    const passwordIsPresent = Boolean(authPassword?.value);
+    const confirmationMatches = authMode !== "register" || (Boolean(authConfirmPassword?.value) && authConfirmPassword?.value === authPassword?.value);
+    setInputValidity(authEmail, !emailIsValid);
+    setInputValidity(authPassword, !passwordIsPresent);
+    setInputValidity(authConfirmPassword, !confirmationMatches);
+    if (!emailIsValid) {
+      setAuthMessage("Enter a valid email address.");
+      authEmail?.focus();
+      return;
+    }
+    if (!passwordIsPresent) {
+      setAuthMessage("Enter a password.");
+      authPassword?.focus();
+      return;
+    }
+    if (!confirmationMatches) {
+      setAuthMessage("Passwords must match.");
+      authConfirmPassword?.focus();
+      return;
+    }
+    if (authPassword) authPassword.value = "";
+    if (authConfirmPassword) authConfirmPassword.value = "";
+    setAuthMessage(authMode === "register" ? "Registration is not connected yet. No account was created." : "Sign-in is not connected yet. No credentials were submitted or stored.", true);
+  });
+  document.addEventListener("keydown", event => {
+    if (!authModal || authModal.hidden) return;
+    if (event.key === "Escape") {
+      event.preventDefault();
+      closeAuthModal();
+      return;
+    }
+    if (event.key !== "Tab") return;
+    const focusable = modalFocusableElements();
+    if (!focusable.length) return;
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+    if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault();
+      last.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault();
+      first.focus();
+    }
+  });
+
+  document.querySelectorAll("[data-account-action]").forEach(control => {
+    control.addEventListener("click", () => {
+      const accountState = root.dataset.accountState || "unauthenticated";
+      const detail = { source: control.dataset.accountSource || "unknown", plan: control.dataset.accountPlan || "" };
+      if (accountState === "authenticated") {
+        document.dispatchEvent(new CustomEvent("rapidycore:account-access-request", { bubbles: true, cancelable: true, detail }));
+        return;
+      }
+      openAuthModal({ plan: detail.plan, trigger: control });
+    });
+  });
 })();
